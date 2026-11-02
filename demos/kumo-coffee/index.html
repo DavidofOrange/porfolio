@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kumo Coffee Roasters｜清澄白河のスペシャルティコーヒー焙煎所</title>
+    <meta name="description" content="東京・清澄白河の小さな焙煎所、Kumo Coffee Roasters。シングルオリジンのコーヒー豆を少量ずつ焙煎し、焼きたてを全国へお届けします。コーヒー豆の通販、定期便、カフェのご案内。">
+    <meta name="theme-color" content="#241710">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='11' fill='%23241710'/%3E%3Cg fill='%23f3e9da'%3E%3Ccircle cx='13' cy='26' r='7'/%3E%3Ccircle cx='22.5' cy='19' r='10'/%3E%3Ccircle cx='31.5' cy='25.5' r='7.5'/%3E%3Crect x='13' y='24' width='18.5' height='9'/%3E%3C/g%3E%3Cellipse cx='22' cy='24' rx='4.6' ry='6.6' transform='rotate(28 22 24)' fill='%23c46a2f'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://picsum.photos">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body id="top">
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner container">
+            <a class="logo" href="#top" aria-label="Kumo Coffee Roasters（ページ上部へ）">
+                <svg class="logo-svg" viewBox="0 0 166 44" aria-hidden="true">
+                    <defs>
+                        <mask id="mark-cut-header" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                            <rect width="44" height="44" fill="#fff"/>
+                            <ellipse cx="22" cy="24" rx="4.6" ry="6.6" transform="rotate(28 22 24)" fill="#000"/>
+                            <path d="M24.4 19.2c-2.6 2.4 1.4 6.4-4.6 9.6" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+                        </mask>
+                    </defs>
+                    <g class="logo-mark" mask="url(#mark-cut-header)">
+                        <circle cx="13" cy="26" r="7"/>
+                        <circle cx="22.5" cy="19" r="10"/>
+                        <circle cx="31.5" cy="25.5" r="7.5"/>
+                        <rect x="13" y="24" width="18.5" height="9"/>
+                    </g>
+                    <text class="logo-word" x="51" y="26">Kumo</text>
+                    <text class="logo-sub" x="52" y="38">COFFEE ROASTERS</text>
+                    <g class="logo-seal">
+                        <rect x="127" y="7" width="17" height="17" rx="3.5"/>
+                        <text x="135.5" y="19.8" text-anchor="middle">雲</text>
+                    </g>
+                </svg>
+            </a>
+
+            <nav class="global-nav" aria-label="メインメニュー">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#story">こだわり</a></li>
+                    <li class="nav-item"><a href="#beans">コーヒー豆</a></li>
+                    <li class="nav-item"><a href="#subscribe">定期便</a></li>
+                    <li class="nav-item"><a href="#visit">店舗案内</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="cart-button" href="#beans" aria-label="カート（0点）">
+                    <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/>
+                        <path d="M9 10V7a3 3 0 0 1 6 0v3"/>
+                    </svg>
+                    <span class="cart-label">カート</span>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開く">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="スマートフォン用メニュー" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <p class="mobile-menu-kicker">Menu</p>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item"><a href="#story"><span class="mobile-menu-num">01</span>こだわり<span class="mobile-menu-en">Our Craft</span></a></li>
+                <li class="mobile-menu-item"><a href="#beans"><span class="mobile-menu-num">02</span>コーヒー豆<span class="mobile-menu-en">Beans</span></a></li>
+                <li class="mobile-menu-item"><a href="#subscribe"><span class="mobile-menu-num">03</span>定期便<span class="mobile-menu-en">Subscription</span></a></li>
+                <li class="mobile-menu-item"><a href="#visit"><span class="mobile-menu-num">04</span>店舗案内<span class="mobile-menu-en">Visit</span></a></li>
+            </ul>
+            <div class="mobile-menu-foot">
+                <p>東京都江東区平野2-14-7</p>
+                <p>8:00 – 18:00（火曜定休）</p>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-media" data-hero-parallax>
+                <img class="hero-image" src="https://picsum.photos/id/1060/1920/1200" width="1920" height="1200" alt="ハンドドリップでコーヒーを淹れている様子" fetchpriority="high">
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <div class="hero-clouds" aria-hidden="true">
+                <span class="hero-cloud hero-cloud-1"></span>
+                <span class="hero-cloud hero-cloud-2"></span>
+                <span class="hero-cloud hero-cloud-3"></span>
+            </div>
+
+            <div class="hero-steam" aria-hidden="true">
+                <svg viewBox="0 0 120 260" preserveAspectRatio="xMidYMax meet">
+                    <path class="steam-path steam-path-1" d="M40 250c-18-30 18-52 0-84s18-52 0-84 14-46 0-72"/>
+                    <path class="steam-path steam-path-2" d="M62 250c-16-28 16-50 0-80s16-50 0-80 12-44 0-70"/>
+                    <path class="steam-path steam-path-3" d="M84 250c-18-30 18-52 0-84s18-52 0-84 14-46 0-72"/>
+                </svg>
+            </div>
+
+            <div class="hero-content container">
+                <p class="hero-kicker">
+                    <span class="hero-kicker-pill">清澄白河の焙煎所</span>
+                    <span class="hero-kicker-en">Small-batch roastery · Tokyo</span>
+                </p>
+                <h1 class="hero-title">
+                    <span class="hero-line"><span class="hero-line-inner">ゆっくり焼いた、</span></span>
+                    <span class="hero-line"><span class="hero-line-inner"><em>雲</em>のように</span></span>
+                    <span class="hero-line"><span class="hero-line-inner">軽やかな一杯。</span></span>
+                </h1>
+                <p class="hero-lead">清澄白河の倉庫を<wbr>改装した<wbr>焙煎所で、<wbr>12kgずつ<wbr>丁寧に<wbr>焼き上げる<wbr>シングルオリジン。<wbr>焙煎から<wbr>72時間以内に、<wbr>ご自宅へ<wbr>お届けします。</p>
+                <div class="hero-actions">
+                    <a class="button button-primary magnetic" href="#subscribe">
+                        <span class="button-label">定期便をはじめる</span>
+                        <svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a class="button button-ghost magnetic" href="#beans">
+                        <span class="button-label">コーヒー豆を見る</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-roasting">
+                <span class="roasting-dot" aria-hidden="true"></span>
+                <p class="roasting-text"><span class="roasting-label">Now roasting</span>エチオピア グジ「ハナ」</p>
+            </div>
+
+            <a class="hero-scroll" href="#marquee" aria-label="コンテンツへスクロール">
+                <span class="hero-scroll-text">Scroll</span>
+                <span class="hero-scroll-line" aria-hidden="true"></span>
+            </a>
+        </section>
+
+        <!-- Marquee -->
+        <section class="marquee" id="marquee" aria-label="産地とフレーバー">
+            <div class="marquee-row marquee-row-main">
+                <div class="marquee-track">
+                    <ul class="marquee-list">
+                        <li>エチオピア グジ</li><li class="marquee-note">Jasmine &amp; Yuzu</li>
+                        <li>コロンビア ウイラ</li><li class="marquee-note">Panela &amp; Red Apple</li>
+                        <li>ケニア ニエリ</li><li class="marquee-note">Blackcurrant</li>
+                        <li>グアテマラ ウエウエテナンゴ</li><li class="marquee-note">Cocoa Nib</li>
+                    </ul>
+                    <ul class="marquee-list" aria-hidden="true">
+                        <li>エチオピア グジ</li><li class="marquee-note">Jasmine &amp; Yuzu</li>
+                        <li>コロンビア ウイラ</li><li class="marquee-note">Panela &amp; Red Apple</li>
+                        <li>ケニア ニエリ</li><li class="marquee-note">Blackcurrant</li>
+                        <li>グアテマラ ウエウエテナンゴ</li><li class="marquee-note">Cocoa Nib</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="marquee-row marquee-row-sub" aria-hidden="true">
+                <div class="marquee-track">
+                    <ul class="marquee-list">
+                        <li>Roasted in Tokyo</li><li>毎週火曜・金曜に焙煎</li><li>Direct Trade</li><li>全国送料無料</li><li>Small Batch</li><li>焼きたてをお届け</li>
+                    </ul>
+                    <ul class="marquee-list">
+                        <li>Roasted in Tokyo</li><li>毎週火曜・金曜に焙煎</li><li>Direct Trade</li><li>全国送料無料</li><li>Small Batch</li><li>焼きたてをお届け</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="story" id="story">
+            <div class="story-inner container">
+                <div class="story-media">
+                    <figure class="story-figure story-figure-main reveal-image" data-reveal>
+                        <img src="https://picsum.photos/id/425/900/1100" width="900" height="1100" alt="明るい台の上に広げた焙煎したてのコーヒー豆" loading="lazy" data-parallax="0.08">
+                    </figure>
+                    <figure class="story-figure story-figure-sub reveal-image" data-reveal>
+                        <img src="https://picsum.photos/id/766/600/600" width="600" height="600" alt="深く焙煎したコーヒー豆のアップ" loading="lazy" data-parallax="-0.06">
+                    </figure>
+                    <div class="story-badge" aria-hidden="true">
+                        <svg class="story-badge-ring" viewBox="0 0 120 120">
+                            <defs><path id="badge-circle" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+                            <text><textPath href="#badge-circle" textLength="286" lengthAdjust="spacing">SMALL BATCH · ROASTED IN TOKYO · SINCE 2016 ·</textPath></text>
+                        </svg>
+                        <span class="story-badge-center">雲</span>
+                    </div>
+                </div>
+
+                <div class="story-text">
+                    <p class="section-kicker" data-reveal><span class="kicker-num">01</span><span class="kicker-en">Our Craft</span></p>
+                    <h2 class="section-title" data-reveal>一度に焼くのは、<br><em>12kg</em>だけ。</h2>
+                    <div class="story-body" data-reveal>
+                        <p>Kumoのはじまりは2016年。古い米倉庫の片隅に、中古のドラム式焙煎機を一台置いたところから始まりました。少しずつ、時間をかけてじっくりと。ハゼの音に耳を澄ませる焙煎は、いまも変わりません。</p>
+                        <p>毎年訪れる数軒の農園から直接買い付け、その週に新鮮なまま届けられる分だけを焼いています。産地の個性が感じられる浅さで、けれどお茶のように軽すぎない。それが私たちの目指す「雲」の味わいです。</p>
+                    </div>
+                    <p class="story-sign" data-reveal>森 遥<span class="story-sign-en">Haruka Mori</span><span class="story-sign-role">代表・ヘッドロースター</span></p>
+                    <ul class="story-stats" data-stagger>
+                        <li class="stat" data-reveal>
+                            <span class="stat-value"><span class="stat-number" data-count="12">12</span><span class="stat-unit">kg</span></span>
+                            <span class="stat-label">1回の焙煎量の上限</span>
+                        </li>
+                        <li class="stat" data-reveal>
+                            <span class="stat-value"><span class="stat-number" data-count="9">9</span><span class="stat-unit">産地</span></span>
+                            <span class="stat-label">今シーズンの取り扱い</span>
+                        </li>
+                        <li class="stat" data-reveal>
+                            <span class="stat-value"><span class="stat-number" data-count="72">72</span><span class="stat-unit">h</span></span>
+                            <span class="stat-label">焙煎からお届けまで</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beans -->
+        <section class="beans" id="beans">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-head-main">
+                        <p class="section-kicker" data-reveal><span class="kicker-num">02</span><span class="kicker-en">This Season</span></p>
+                        <h2 class="section-title" data-reveal>今季のおすすめ、<br><em>4</em>つの豆。</h2>
+                    </div>
+                    <p class="section-lead" data-reveal>すべて200g入り。毎週火曜・金曜にご注文分だけを焙煎し、アロマバルブ付きの袋に詰めてお届けします。</p>
+                </div>
+
+                <div class="product-list" data-stagger>
+                    <article class="product-card" data-reveal>
+                        <div class="product-media">
+                            <img src="https://picsum.photos/id/425/700/800" width="700" height="800" alt="浅煎りのエチオピアのコーヒー豆" loading="lazy">
+                            <span class="product-tag">浅煎り</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-origin">Ethiopia · Guji</p>
+                            <h3 class="product-name">エチオピア グジ<span class="product-name-sub">Hana Washed</span></h3>
+                            <ul class="product-notes">
+                                <li>ジャスミン</li><li>柚子</li><li>はちみつ</li>
+                            </ul>
+                            <div class="roast-meter" aria-label="焙煎度 5段階中1">
+                                <span class="roast-dot is-on"></span><span class="roast-dot"></span><span class="roast-dot"></span><span class="roast-dot"></span><span class="roast-dot"></span>
+                            </div>
+                            <div class="product-foot">
+                                <p class="product-price">¥2,400<span class="product-size">税込 / 200g</span></p>
+                                <button class="add-button" type="button" data-product="エチオピア グジ">
+                                    <span class="add-icon" aria-hidden="true"></span>
+                                    <span class="add-text"><span class="add-text-default">カートへ</span><span class="add-text-done">追加済み</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-reveal>
+                        <div class="product-media">
+                            <img src="https://picsum.photos/id/766/700/800" width="700" height="800" alt="中煎りのコロンビアのコーヒー豆" loading="lazy">
+                            <span class="product-tag">中煎り</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-origin">Colombia · Huila</p>
+                            <h3 class="product-name">コロンビア ウイラ<span class="product-name-sub">Finca La Nube</span></h3>
+                            <ul class="product-notes">
+                                <li>黒糖</li><li>赤りんご</li><li>カカオ</li>
+                            </ul>
+                            <div class="roast-meter" aria-label="焙煎度 5段階中3">
+                                <span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot"></span><span class="roast-dot"></span>
+                            </div>
+                            <div class="product-foot">
+                                <p class="product-price">¥2,200<span class="product-size">税込 / 200g</span></p>
+                                <button class="add-button" type="button" data-product="コロンビア ウイラ">
+                                    <span class="add-icon" aria-hidden="true"></span>
+                                    <span class="add-text"><span class="add-text-default">カートへ</span><span class="add-text-done">追加済み</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-reveal>
+                        <div class="product-media">
+                            <img src="https://picsum.photos/id/63/700/800" width="700" height="800" alt="赤い背景に置かれたコーヒーカップを真上から" loading="lazy">
+                            <span class="product-tag">浅煎り</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-origin">Kenya · Nyeri</p>
+                            <h3 class="product-name">ケニア ニエリ<span class="product-name-sub">Gatomboya AA</span></h3>
+                            <ul class="product-notes">
+                                <li>カシス</li><li>ハイビスカス</li><li>グレープフルーツ</li>
+                            </ul>
+                            <div class="roast-meter" aria-label="焙煎度 5段階中2">
+                                <span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot"></span><span class="roast-dot"></span><span class="roast-dot"></span>
+                            </div>
+                            <div class="product-foot">
+                                <p class="product-price">¥2,800<span class="product-size">税込 / 200g</span></p>
+                                <button class="add-button" type="button" data-product="ケニア ニエリ">
+                                    <span class="add-icon" aria-hidden="true"></span>
+                                    <span class="add-text"><span class="add-text-default">カートへ</span><span class="add-text-done">追加済み</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-reveal>
+                        <div class="product-media">
+                            <img src="https://picsum.photos/id/30/700/800" width="700" height="800" alt="テーブルに置かれた温かみのあるマグカップ" loading="lazy">
+                            <span class="product-tag">中深煎り</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-origin">House Blend</p>
+                            <h3 class="product-name">Kumo ブレンド<span class="product-name-sub">Brazil × Guatemala</span></h3>
+                            <ul class="product-notes">
+                                <li>ミルクチョコ</li><li>ヘーゼルナッツ</li><li>黒蜜</li>
+                            </ul>
+                            <div class="roast-meter" aria-label="焙煎度 5段階中4">
+                                <span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot is-on"></span><span class="roast-dot"></span>
+                            </div>
+                            <div class="product-foot">
+                                <p class="product-price">¥1,980<span class="product-size">税込 / 200g</span></p>
+                                <button class="add-button" type="button" data-product="Kumo ブレンド">
+                                    <span class="add-icon" aria-hidden="true"></span>
+                                    <span class="add-text"><span class="add-text-default">カートへ</span><span class="add-text-done">追加済み</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription -->
+        <section class="subscribe" id="subscribe">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-head-main">
+                        <p class="section-kicker" data-reveal><span class="kicker-num">03</span><span class="kicker-en">Subscription</span></p>
+                        <h2 class="section-title" data-reveal>お好みのペースで、<br>いつも<em>焼きたて</em>を。</h2>
+                    </div>
+                    <p class="section-lead" data-reveal>ご注文ごとに焙煎し、全国へお届けします。お休み・スキップ・豆の変更はいつでも自由。縛りや解約金はありません。</p>
+                </div>
+
+                <ol class="step-list" data-stagger>
+                    <li class="step" data-reveal>
+                        <span class="step-number">01</span>
+                        <svg class="step-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <ellipse cx="24" cy="24" rx="11" ry="16" transform="rotate(28 24 24)"/>
+                            <path d="M28.5 11.5c-5.5 5-0.5 13-8.5 25"/>
+                        </svg>
+                        <h3 class="step-title">好みの味を選ぶ</h3>
+                        <p class="step-text">華やかでフルーティー、まろやかで甘い、深くチョコレートのよう。迷ったら焙煎士の「おまかせ」もどうぞ。</p>
+                    </li>
+                    <li class="step" data-reveal>
+                        <span class="step-number">02</span>
+                        <svg class="step-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M10 22h24v8a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10z"/>
+                            <path d="M34 25h3a4 4 0 0 1 0 8h-4"/>
+                            <path d="M17 8c-2 3 2 5 0 8M23 6c-2 3 2 5 0 8M29 8c-2 3 2 5 0 8"/>
+                        </svg>
+                        <h3 class="step-title">ご注文ごとに焙煎</h3>
+                        <p class="step-text">火曜か金曜に焙煎し、48時間なじませてから、土に還るパッケージに詰めて発送します。</p>
+                    </li>
+                    <li class="step" data-reveal>
+                        <span class="step-number">03</span>
+                        <svg class="step-icon" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M8 17l16-9 16 9v16l-16 9-16-9z"/>
+                            <path d="M8 17l16 9 16-9M24 26v16"/>
+                        </svg>
+                        <h3 class="step-title">淹れて、味わう</h3>
+                        <p class="step-text">全国送料無料。毎回おすすめの淹れ方カードを同封します。配送の管理はマイページからいつでも。</p>
+                    </li>
+                </ol>
+
+                <div class="plan" data-reveal>
+                    <figure class="plan-media">
+                        <img src="https://picsum.photos/id/882/900/900" width="900" height="900" alt="テラコッタタイルの上に置かれたコーヒーと本" loading="lazy" data-parallax="0.06">
+                        <span class="plan-badge">定期便<strong>10%</strong>OFF</span>
+                    </figure>
+                    <div class="plan-body">
+                        <h3 class="plan-title">あなたのプランをつくる</h3>
+                        <div class="plan-group">
+                            <p class="plan-label">お届けの頻度</p>
+                            <div class="chip-group" data-plan="frequency">
+                                <button class="chip is-active" type="button" data-value="2" aria-pressed="true">2週間ごと</button>
+                                <button class="chip" type="button" data-value="1" aria-pressed="false">1か月ごと</button>
+                            </div>
+                        </div>
+                        <div class="plan-group">
+                            <p class="plan-label">1回のお届け数<span class="plan-label-sub">1袋200g</span></p>
+                            <div class="chip-group" data-plan="bags">
+                                <button class="chip" type="button" data-value="1" aria-pressed="false">1袋</button>
+                                <button class="chip is-active" type="button" data-value="2" aria-pressed="true">2袋</button>
+                                <button class="chip" type="button" data-value="3" aria-pressed="false">3袋</button>
+                            </div>
+                        </div>
+                        <div class="plan-total">
+                            <p class="plan-price">¥<span class="plan-price-number" data-plan-price>4,320</span><span class="plan-price-unit">/ 1回（税込）</span></p>
+                            <p class="plan-note">月あたり 約¥<span data-plan-month>8,640</span>・送料無料</p>
+                        </div>
+                        <a class="button button-primary magnetic" href="#newsletter">
+                            <span class="button-label">定期便をはじめる</span>
+                            <svg class="button-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit -->
+        <section class="visit" id="visit">
+            <div class="visit-inner container">
+                <div class="visit-media">
+                    <figure class="visit-figure visit-figure-main reveal-image" data-reveal>
+                        <img src="https://picsum.photos/id/42/1200/900" width="1200" height="900" alt="長い木のテーブルがあるカフェの店内" loading="lazy" data-parallax="0.08">
+                    </figure>
+                    <figure class="visit-figure visit-figure-sub reveal-image" data-reveal>
+                        <img src="https://picsum.photos/id/513/600/700" width="600" height="700" alt="明るいカフェでくつろぐお客さま" loading="lazy">
+                    </figure>
+                </div>
+                <div class="visit-text">
+                    <p class="section-kicker" data-reveal><span class="kicker-num">04</span><span class="kicker-en">Visit Us</span></p>
+                    <h2 class="section-title" data-reveal>川のほとりの、<br><em>12</em>席のカフェ。</h2>
+                    <p class="visit-lead" data-reveal>焙煎所の一角は、小さなコーヒースタンドになっています。ガラス越しに焙煎の様子を眺めながら、ハンドドリップを一杯。冷ましたばかりの豆もお持ち帰りいただけます。</p>
+                    <p class="open-status" data-open-status data-reveal><span class="open-status-dot" aria-hidden="true"></span><span class="open-status-text">火曜定休・8:00 – 18:00</span></p>
+                    <dl class="visit-info" data-stagger>
+                        <div class="visit-info-row" data-reveal>
+                            <dt>住所</dt>
+                            <dd>〒135-0023 東京都江東区平野2-14-7<span class="visit-info-sub">2-14-7 Hirano, Koto-ku, Tokyo</span></dd>
+                        </div>
+                        <div class="visit-info-row" data-reveal>
+                            <dt>営業時間</dt>
+                            <dd>8:00 – 18:00<span class="visit-info-sub">火曜定休（焙煎日のため）</span></dd>
+                        </div>
+                        <div class="visit-info-row" data-reveal>
+                            <dt>アクセス</dt>
+                            <dd>清澄白河駅 A3出口より徒歩4分</dd>
+                        </div>
+                    </dl>
+                    <a class="text-link" href="#visit" data-reveal>Googleマップで見る<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voices -->
+        <section class="voices" id="voices">
+            <div class="container">
+                <div class="section-head section-head-center">
+                    <div class="section-head-main">
+                        <p class="section-kicker" data-reveal><span class="kicker-num">05</span><span class="kicker-en">Voices</span></p>
+                        <h2 class="section-title" data-reveal>お客さまと、<br>メディアからの声。</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="voices-slider" data-reveal>
+                <div class="swiper voices-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card">
+                                <p class="voice-quote">エチオピアの「ハナ」は、春の朝をそのまま閉じ込めたような味。もう他のお店では豆を買えなくなりました。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">由</span><span class="voice-name">田中 由紀 さま<span class="voice-meta">定期便ご利用（2021年〜）</span></span></p>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card voice-card-press">
+                                <p class="voice-quote">東京・東側のコーヒーシーンを静かに支える一軒。誠実で、惜しみない焙煎。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">旅</span><span class="voice-name">『旅と食卓』<span class="voice-meta">2026年 コーヒー特集号</span></span></p>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card">
+                                <p class="voice-quote">ハンドドリップを飲みに来て、つい話し込んでしまう。いつもの注文も、うちの犬の名前も覚えてくれているんです。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">健</span><span class="voice-name">佐藤 健 さま<span class="voice-meta">清澄白河の常連</span></span></p>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card">
+                                <p class="voice-quote">定期便は今年いちばんの正解でした。2週間ごとに届く豆は、いつ開けても香りが立っています。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">恵</span><span class="voice-name">林 恵美 さま<span class="voice-meta">定期便ご利用・大阪府</span></span></p>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card voice-card-press">
+                                <p class="voice-quote">ケニアは、まるでカップの中のフルーツバスケット。クリーンで明るく、何杯でも飲みたくなる。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">E</span><span class="voice-name">East Side Coffee Guide<span class="voice-meta">編集部おすすめ</span></span></p>
+                            </blockquote>
+                        </div>
+                        <div class="swiper-slide voice-slide">
+                            <blockquote class="voice-card">
+                                <p class="voice-quote">焙煎日、淹れ方のメモ、手書きのカード。箱を開けるたび、友人から手紙が届いたような気持ちになります。</p>
+                                <p class="voice-author"><span class="voice-avatar" aria-hidden="true">空</span><span class="voice-name">三宅 空 さま<span class="voice-meta">定期便ご利用・北海道</span></span></p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="voices-controls container">
+                    <button class="voices-arrow voices-prev" type="button" aria-label="前の声へ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+                    <div class="voices-pagination"></div>
+                    <button class="voices-arrow voices-next" type="button" aria-label="次の声へ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter" id="newsletter">
+            <div class="newsletter-media" aria-hidden="true">
+                <img src="https://picsum.photos/id/755/1600/1000" width="1600" height="1000" alt="" loading="lazy" data-parallax="0.12">
+            </div>
+            <div class="newsletter-inner container">
+                <p class="section-kicker" data-reveal><span class="kicker-en">Newsletter</span></p>
+                <h2 class="section-title" data-reveal>はじめての一袋が、<br><em>¥500</em> OFFに。</h2>
+                <p class="newsletter-lead" data-reveal>月に一度、新しい産地のこと、おいしい淹れ方、数量限定ロットの先行案内をお届けします。</p>
+                <form class="newsletter-form" data-newsletter data-reveal novalidate>
+                    <label class="visually-hidden" for="newsletter-email">メールアドレス</label>
+                    <input class="newsletter-input" id="newsletter-email" type="email" name="email" placeholder="メールアドレス" autocomplete="email" required>
+                    <button class="button button-primary magnetic" type="submit"><span class="button-label">登録する</span></button>
+                </form>
+                <p class="newsletter-message" data-newsletter-message aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a class="logo footer-logo" href="#top" aria-label="Kumo Coffee Roasters（ページ上部へ）">
+                        <svg class="logo-svg" viewBox="0 0 166 44" aria-hidden="true">
+                            <defs>
+                                <mask id="mark-cut-footer" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="44">
+                                    <rect width="44" height="44" fill="#fff"/>
+                                    <ellipse cx="22" cy="24" rx="4.6" ry="6.6" transform="rotate(28 22 24)" fill="#000"/>
+                                    <path d="M24.4 19.2c-2.6 2.4 1.4 6.4-4.6 9.6" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+                                </mask>
+                            </defs>
+                            <g class="logo-mark" mask="url(#mark-cut-footer)">
+                                <circle cx="13" cy="26" r="7"/>
+                                <circle cx="22.5" cy="19" r="10"/>
+                                <circle cx="31.5" cy="25.5" r="7.5"/>
+                                <rect x="13" y="24" width="18.5" height="9"/>
+                            </g>
+                            <text class="logo-word" x="51" y="26">Kumo</text>
+                            <text class="logo-sub" x="52" y="38">COFFEE ROASTERS</text>
+                            <g class="logo-seal">
+                                <rect x="127" y="7" width="17" height="17" rx="3.5"/>
+                                <text x="135.5" y="19.8" text-anchor="middle">雲</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="footer-tagline">東京・清澄白河で、ひと袋ずつ丁寧に焙煎するスペシャルティコーヒー。</p>
+                </div>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <p class="footer-heading">ショップ</p>
+                        <ul class="footer-list">
+                            <li><a href="#beans">シングルオリジン</a></li>
+                            <li><a href="#subscribe">定期便</a></li>
+                            <li><a href="#beans">ギフトカード</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <p class="footer-heading">店舗</p>
+                        <ul class="footer-list">
+                            <li>東京都江東区平野2-14-7</li>
+                            <li>8:00 – 18:00（火曜定休）</li>
+                            <li><a href="#visit">アクセス</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <p class="footer-heading">フォロー</p>
+                        <ul class="footer-list">
+                            <li><a href="#top">Instagram</a></li>
+                            <li><a href="#top">note</a></li>
+                            <li><a href="#newsletter">ニュースレター</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-giant" aria-hidden="true">Kumo<span class="footer-giant-jp">雲</span></p>
+            <div class="footer-bottom">
+                <p class="footer-copy">© <span data-year>2026</span> Kumo Coffee Roasters</p>
+                <p class="footer-credit">デモサイト制作：<a href="../../index.html">David Childerhose</a> ― Kumo Coffee Roasters は架空のブランドです。写真：Unsplash（Picsum経由）</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite"><span class="toast-icon" aria-hidden="true"></span><span class="toast-text"></span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

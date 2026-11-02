@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiri Retreat | Mountain Onsen Retreat in Hakuba, Nagano</title>
+    <meta name="description" content="Kiri Retreat is a twelve-suite hot-spring retreat in the misty mountains of Hakuba, Nagano. Open-air onsen, seasonal kaiseki and quiet suites of hinoki and stone.">
+    <meta name="theme-color" content="#1f2a2e">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2a2e'/%3E%3Ccircle cx='42' cy='20' r='5' fill='%23c9a96e'/%3E%3Cpath d='M9 43 L25 22 L34 34 L40 27 L55 43' fill='none' stroke='%23eeeae1' stroke-width='3.2' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M15 50 H37 M27 55 H49' stroke='%238fa3aa' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://picsum.photos/id/1018/1920/1200">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+        <symbol id="logo-mark" viewBox="0 0 56 56">
+            <circle class="logo-sun" cx="38" cy="16" r="4.5" />
+            <path class="logo-ridge" d="M4 39 L19.5 18 L28.5 30 L34.5 23 L52 39" />
+            <path class="logo-mist" d="M10 45.5 H33 M22 51 H46" />
+        </symbol>
+    </svg>
+
+    <div class="loader" aria-hidden="true">
+        <svg class="loader-mark" viewBox="0 0 56 56"><use href="#logo-mark" /></svg>
+        <p class="loader-text">霧</p>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="#top" aria-label="Kiri Retreat home">
+                <svg class="logo-icon" viewBox="0 0 56 56" aria-hidden="true"><use href="#logo-mark" /></svg>
+                <span class="logo-text">
+                    <span class="logo-name">KIRI</span>
+                    <span class="logo-sub">Retreat <span class="logo-jp" lang="ja">霧</span></span>
+                </span>
+            </a>
+            <nav class="global-nav" aria-label="Main">
+                <ul class="nav-list">
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#onsen">Onsen</a></li>
+                    <li><a href="#dining">Dining</a></li>
+                    <li><a href="#seasons">Seasons</a></li>
+                    <li><a href="#access">Access</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-book header-book" href="#booking">Book a stay</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                <span class="menu-toggle-line"></span>
+                <span class="menu-toggle-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <p class="mobile-menu-kicker" lang="ja">霧の宿 — 白馬</p>
+            <ul class="mobile-menu-list">
+                <li><a href="#rooms"><span class="mobile-menu-jp" lang="ja">客室</span>Rooms</a></li>
+                <li><a href="#onsen"><span class="mobile-menu-jp" lang="ja">温泉</span>Onsen</a></li>
+                <li><a href="#dining"><span class="mobile-menu-jp" lang="ja">食</span>Dining</a></li>
+                <li><a href="#seasons"><span class="mobile-menu-jp" lang="ja">四季</span>Seasons</a></li>
+                <li><a href="#access"><span class="mobile-menu-jp" lang="ja">交通</span>Access</a></li>
+            </ul>
+            <a class="btn btn-book mobile-menu-book" href="#booking">Book a stay</a>
+        </div>
+    </div>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero" aria-label="Kiri Retreat">
+            <div class="hero-media" data-parallax="0.35">
+                <img class="hero-image" src="https://picsum.photos/id/1018/1920/1200" width="1920" height="1200" alt="Green mountain ridges wrapped in morning mist">
+            </div>
+            <div class="hero-ridges" aria-hidden="true">
+                <svg class="ridge ridge-back" data-parallax="0.22" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 196 L70 172 L140 182 L230 120 Q246 110 262 120 L330 150 L410 104 Q424 96 438 104 L520 152 L610 138 L700 168 L800 112 Q818 100 836 110 L900 92 Q914 86 928 94 L1010 140 L1100 126 L1180 160 L1270 118 Q1284 110 1298 118 L1360 140 L1440 124 L1440 320 L0 320 Z" /></svg>
+                <svg class="ridge ridge-mid" data-parallax="0.12" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 246 L90 222 L170 232 L280 192 Q296 186 312 194 L420 228 L520 214 L640 238 L760 204 Q776 198 792 204 L900 236 L1010 222 L1120 196 Q1136 190 1152 198 L1260 232 L1360 218 L1440 228 L1440 320 L0 320 Z" /></svg>
+                <svg class="ridge ridge-front" data-parallax="0.04" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 286 C220 270 380 280 560 272 C760 263 940 284 1120 278 C1260 274 1360 266 1440 270 L1440 320 L0 320 Z" /></svg>
+            </div>
+            <div class="hero-mist" aria-hidden="true">
+                <span class="mist mist-1"></span>
+                <span class="mist mist-2"></span>
+                <span class="mist mist-3"></span>
+            </div>
+            <div class="hero-content">
+                <p class="hero-kicker"><span lang="ja">白馬・長野</span><span class="hero-kicker-line"></span>Hakuba, Nagano</p>
+                <h1 class="hero-title">
+                    <span class="line"><span class="line-inner" data-split>Where the</span></span>
+                    <span class="line"><span class="line-inner" data-split>mountains</span></span>
+                    <span class="line"><span class="line-inner line-italic" data-split>breathe mist.</span></span>
+                </h1>
+                <p class="hero-lead">A twelve-suite hot-spring retreat, 1,100 metres above the valley.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-book" href="#booking">Reserve your stay</a>
+                    <a class="btn-text" href="#intro">Discover Kiri</a>
+                </div>
+            </div>
+            <p class="hero-vertical" lang="ja" aria-hidden="true">霧の宿</p>
+            <a class="hero-scroll" href="#intro" aria-label="Scroll to introduction">
+                <span class="hero-scroll-text">Scroll</span>
+                <span class="hero-scroll-line"></span>
+            </a>
+        </section>
+
+        <!-- Intro -->
+        <section class="intro" id="intro">
+            <div class="container">
+                <p class="kicker reveal"><span class="kicker-jp" lang="ja">理念</span>Philosophy</p>
+                <p class="intro-statement" data-words>Kiri is a quiet place at the edge of the clouds. Twelve suites of hinoki and stone, a spring that has run warm for a thousand years, and mornings when the whole valley vanishes into mist. Nothing is asked of you here, except to slow down.</p>
+                <div class="intro-body">
+                    <div class="intro-figures">
+                        <figure class="intro-figure intro-figure-a clip-reveal">
+                            <img data-parallax-inner="0.08" src="https://picsum.photos/id/989/900/1100" width="900" height="1100" alt="Rolling green hills softened by mist" loading="lazy">
+                        </figure>
+                        <figure class="intro-figure intro-figure-b clip-reveal">
+                            <img data-parallax-inner="0.12" src="https://picsum.photos/id/1044/800/1000" width="800" height="1000" alt="A misty river running through the forest" loading="lazy">
+                        </figure>
+                    </div>
+                    <div class="intro-text">
+                        <p class="intro-copy reveal">We built Kiri around three things the mountain already gave us: water, wood and weather. Everything else, from the slow kaiseki dinner to the unlit path to the bath, follows from them.</p>
+                        <ul class="stats">
+                            <li class="stat reveal">
+                                <span class="stat-num" data-count="12">12</span>
+                                <span class="stat-label">Suites, never more</span>
+                            </li>
+                            <li class="stat reveal">
+                                <span class="stat-num"><span data-count="1100">1,100</span><small>m</small></span>
+                                <span class="stat-label">Above sea level</span>
+                            </li>
+                            <li class="stat reveal">
+                                <span class="stat-num"><span data-count="42">42</span><small>°C</small></span>
+                                <span class="stat-label">At the spring source</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms -->
+        <section class="rooms" id="rooms">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker reveal"><span class="kicker-jp" lang="ja">客室</span>Rooms &amp; Suites</p>
+                    <h2 class="section-title reveal">Twelve rooms, <em>each facing the ridge.</em></h2>
+                    <p class="section-lead reveal">Tatami, hinoki and wide glass. Every room is set so the first thing you see in the morning is the mountain.</p>
+                </div>
+                <ul class="room-list">
+                    <li class="room-card reveal">
+                        <a class="room-link" href="#booking">
+                            <figure class="room-figure clip-reveal">
+                                <img src="https://picsum.photos/id/1008/900/1100" width="900" height="1100" alt="A dim, quiet room beside a tall window" loading="lazy">
+                                <span class="room-tag" lang="ja">霧の間</span>
+                            </figure>
+                            <div class="room-body">
+                                <p class="room-meta">42 m² · 2 guests</p>
+                                <h3 class="room-name">Mist Room</h3>
+                                <p class="room-text">A low futon, a window seat, and a view straight into the morning cloud.</p>
+                                <p class="room-price"><span class="room-price-from">from</span> ¥68,000 <span class="room-price-unit">/ night</span></p>
+                                <span class="room-more">View room</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="room-card reveal">
+                        <a class="room-link" href="#booking">
+                            <figure class="room-figure clip-reveal">
+                                <img src="https://picsum.photos/id/42/900/1100" width="900" height="1100" alt="Tea served on a long wooden table" loading="lazy">
+                                <span class="room-tag" lang="ja">檜</span>
+                            </figure>
+                            <div class="room-body">
+                                <p class="room-meta">68 m² · 2–3 guests</p>
+                                <h3 class="room-name">Hinoki Suite</h3>
+                                <p class="room-text">A private cypress bath on the terrace, fed directly from the spring.</p>
+                                <p class="room-price"><span class="room-price-from">from</span> ¥98,000 <span class="room-price-unit">/ night</span></p>
+                                <span class="room-more">View suite</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="room-card reveal">
+                        <a class="room-link" href="#booking">
+                            <figure class="room-figure clip-reveal">
+                                <img src="https://picsum.photos/id/594/900/1100" width="900" height="1100" alt="A small wooden house at the end of a pier on a still lake at dusk" loading="lazy">
+                                <span class="room-tag" lang="ja">湖畔</span>
+                            </figure>
+                            <div class="room-body">
+                                <p class="room-meta">120 m² · up to 4 guests</p>
+                                <h3 class="room-name">Lake House</h3>
+                                <p class="room-text">A private house at the end of its own pier, with a fire pit and an open-air bath.</p>
+                                <p class="room-price"><span class="room-price-from">from</span> ¥168,000 <span class="room-price-unit">/ night</span></p>
+                                <span class="room-more">View house</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Onsen -->
+        <section class="onsen" id="onsen">
+            <div class="onsen-stage">
+                <div class="onsen-frame" data-unveil>
+                    <img class="onsen-image" src="https://picsum.photos/id/512/1920/1200" width="1920" height="1200" alt="Guests bathing in a steaming outdoor hot spring" loading="lazy">
+                    <div class="onsen-steam" aria-hidden="true">
+                        <span class="steam"></span>
+                        <span class="steam"></span>
+                        <span class="steam"></span>
+                        <span class="steam"></span>
+                        <span class="steam"></span>
+                    </div>
+                    <div class="onsen-overlay">
+                        <p class="kicker kicker-light reveal"><span class="kicker-jp" lang="ja">温泉</span>The Onsen</p>
+                        <h2 class="onsen-title reveal">The spring,<br><em>open to the sky.</em></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="onsen-info">
+                    <p class="onsen-copy reveal">Our rotenburo sits on a ledge of granite above the river. The water rises at 42°C from a source two hundred metres below the hotel, rich in sodium bicarbonate, the kind locals call <em>bijin-no-yu</em>, the bath of beauty. Come at dawn, when the steam and the mist become the same thing.</p>
+                    <dl class="onsen-facts">
+                        <div class="onsen-fact reveal">
+                            <dt>Source</dt>
+                            <dd>Natural spring, 42°C</dd>
+                        </div>
+                        <div class="onsen-fact reveal">
+                            <dt>Waters</dt>
+                            <dd>Sodium bicarbonate</dd>
+                        </div>
+                        <div class="onsen-fact reveal">
+                            <dt>Open</dt>
+                            <dd>5:00 – 24:00</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dining -->
+        <section class="dining" id="dining">
+            <div class="container">
+                <div class="dining-layout">
+                    <div class="dining-visual">
+                        <figure class="dining-figure dining-figure-main clip-reveal">
+                            <img data-parallax-inner="0.1" src="https://picsum.photos/id/625/1000/1250" width="1000" height="1250" alt="A bright dining room with a wooden table and chairs" loading="lazy">
+                        </figure>
+                        <figure class="dining-figure dining-figure-sub clip-reveal">
+                            <img src="https://picsum.photos/id/225/600/700" width="600" height="700" alt="Green tea steeping in a glass teapot" loading="lazy">
+                        </figure>
+                    </div>
+                    <div class="dining-text">
+                        <p class="kicker reveal"><span class="kicker-jp" lang="ja">食</span>Dining</p>
+                        <h2 class="section-title reveal">Kaiseki, <em>written by the season.</em></h2>
+                        <p class="section-lead reveal">Chef Aoi Mori cooks with what the valley offers each week: mountain vegetables, river fish, Shinshu soba and wild mushrooms. Dinner is served in seven quiet courses.</p>
+                        <ol class="course-list">
+                            <li class="course reveal"><span class="course-num">01</span><span class="course-jp" lang="ja">先付</span><span class="course-name">Sakizuke, a small opening bite</span></li>
+                            <li class="course reveal"><span class="course-num">02</span><span class="course-jp" lang="ja">八寸</span><span class="course-name">Hassun, the seasonal platter</span></li>
+                            <li class="course reveal"><span class="course-num">03</span><span class="course-jp" lang="ja">向付</span><span class="course-name">Mukozuke, river and sea sashimi</span></li>
+                            <li class="course reveal"><span class="course-num">04</span><span class="course-jp" lang="ja">焼物</span><span class="course-name">Yakimono, grilled over binchotan</span></li>
+                            <li class="course reveal"><span class="course-num">05</span><span class="course-jp" lang="ja">炊合</span><span class="course-name">Takiawase, simmered vegetables</span></li>
+                            <li class="course reveal"><span class="course-num">06</span><span class="course-jp" lang="ja">食事</span><span class="course-name">Shokuji, rice from the terraces</span></li>
+                            <li class="course reveal"><span class="course-num">07</span><span class="course-jp" lang="ja">水物</span><span class="course-name">Mizumono, fruit and matcha</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasons -->
+        <section class="seasons" id="seasons">
+            <div class="container">
+                <div class="section-head section-head-center">
+                    <p class="kicker reveal"><span class="kicker-jp" lang="ja">四季</span>Seasonal Experiences</p>
+                    <h2 class="section-title reveal">Four seasons, <em>four different mountains.</em></h2>
+                </div>
+                <div class="season-tabs reveal" role="tablist" aria-label="Seasons">
+                    <button class="season-tab is-active" type="button" role="tab" id="tab-spring" aria-controls="panel-spring" aria-selected="true"><span class="season-tab-jp" lang="ja">春</span>Spring<span class="season-tab-bar"></span></button>
+                    <button class="season-tab" type="button" role="tab" id="tab-summer" aria-controls="panel-summer" aria-selected="false" tabindex="-1"><span class="season-tab-jp" lang="ja">夏</span>Summer<span class="season-tab-bar"></span></button>
+                    <button class="season-tab" type="button" role="tab" id="tab-autumn" aria-controls="panel-autumn" aria-selected="false" tabindex="-1"><span class="season-tab-jp" lang="ja">秋</span>Autumn<span class="season-tab-bar"></span></button>
+                    <button class="season-tab" type="button" role="tab" id="tab-winter" aria-controls="panel-winter" aria-selected="false" tabindex="-1"><span class="season-tab-jp" lang="ja">冬</span>Winter<span class="season-tab-bar"></span></button>
+                </div>
+                <div class="season-stage reveal">
+                    <div class="season-panel is-active" role="tabpanel" id="panel-spring" aria-labelledby="tab-spring">
+                        <figure class="season-figure">
+                            <img src="https://picsum.photos/id/82/1400/900" width="1400" height="900" alt="Soft spring blossoms" loading="lazy">
+                        </figure>
+                        <div class="season-body">
+                            <p class="season-months">April – May</p>
+                            <h3 class="season-name">Snowmelt &amp; blossom</h3>
+                            <p class="season-text">Late cherry blossom against still-white peaks. Forage for sansai, the wild mountain greens, with our chef.</p>
+                            <ul class="season-list">
+                                <li>Sansai foraging walk</li>
+                                <li>Blossom viewing by the river</li>
+                                <li>Spring kaiseki</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="season-panel" role="tabpanel" id="panel-summer" aria-labelledby="tab-summer" hidden>
+                        <figure class="season-figure">
+                            <img src="https://picsum.photos/id/1035/1400/900" width="1400" height="900" alt="A waterfall pouring into a green summer forest" loading="lazy">
+                        </figure>
+                        <div class="season-body">
+                            <p class="season-months">June – August</p>
+                            <h3 class="season-name">Cool forest, clear water</h3>
+                            <p class="season-text">Ten degrees cooler than Tokyo. Canoe at dawn on Lake Aoki, then hike to waterfalls hidden in the cedar forest.</p>
+                            <ul class="season-list">
+                                <li>Sunrise canoe on Lake Aoki</li>
+                                <li>Waterfall trail with a guide</li>
+                                <li>Firefly evenings in early July</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="season-panel" role="tabpanel" id="panel-autumn" aria-labelledby="tab-autumn" hidden>
+                        <figure class="season-figure">
+                            <img src="https://picsum.photos/id/167/1400/900" width="1400" height="900" alt="Bright autumn leaves" loading="lazy">
+                        </figure>
+                        <div class="season-body">
+                            <p class="season-months">September – November</p>
+                            <h3 class="season-name">Three-tone mountains</h3>
+                            <p class="season-text">Snow on the summit, red maple on the slopes, green in the valley. Hakuba calls it <em>sandan kōyō</em>.</p>
+                            <ul class="season-list">
+                                <li>Gondola to the autumn ridge</li>
+                                <li>Wild mushroom kaiseki</li>
+                                <li>Moon-viewing in the bath</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="season-panel" role="tabpanel" id="panel-winter" aria-labelledby="tab-winter" hidden>
+                        <figure class="season-figure">
+                            <img src="https://picsum.photos/id/559/1400/900" width="1400" height="900" alt="A quiet path through a snowy forest" loading="lazy">
+                        </figure>
+                        <div class="season-body">
+                            <p class="season-months">December – March</p>
+                            <h3 class="season-name">Powder &amp; steam</h3>
+                            <p class="season-text">World-famous Hakuba powder by day, a steaming bath under falling snow by night.</p>
+                            <ul class="season-list">
+                                <li>Private ski guide &amp; ski valet</li>
+                                <li>Snowshoe walk by lantern light</li>
+                                <li>Hot sake by the irori hearth</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery" id="gallery" aria-label="Gallery">
+            <div class="gallery-sticky">
+                <div class="gallery-head container">
+                    <p class="kicker reveal"><span class="kicker-jp" lang="ja">風景</span>Gallery</p>
+                    <h2 class="section-title reveal">Around the <em>valley.</em></h2>
+                </div>
+                <div class="gallery-viewport">
+                    <ul class="gallery-track">
+                        <li class="gallery-item gallery-item-tall"><img src="https://picsum.photos/id/1036/800/1000" width="800" height="1000" alt="Snow-covered mountain peaks" loading="lazy"><span class="gallery-caption">Northern Alps, January</span></li>
+                        <li class="gallery-item gallery-item-wide"><img src="https://picsum.photos/id/1051/1200/800" width="1200" height="800" alt="A wooden pier on a mountain lake" loading="lazy"><span class="gallery-caption">Lake Aoki pier</span></li>
+                        <li class="gallery-item"><img src="https://picsum.photos/id/1039/900/900" width="900" height="900" alt="A waterfall in a green forest" loading="lazy"><span class="gallery-caption">Cedar forest falls</span></li>
+                        <li class="gallery-item gallery-item-tall"><img src="https://picsum.photos/id/469/800/1000" width="800" height="1000" alt="A canoe on a misty green lake" loading="lazy"><span class="gallery-caption">Morning paddle</span></li>
+                        <li class="gallery-item gallery-item-wide"><img src="https://picsum.photos/id/1043/1200/800" width="1200" height="800" alt="A forested valley between cliffs" loading="lazy"><span class="gallery-caption">The upper valley</span></li>
+                        <li class="gallery-item"><img src="https://picsum.photos/id/931/900/900" width="900" height="900" alt="Layered blue mountain ridges in mist" loading="lazy"><span class="gallery-caption">Ridges at dusk</span></li>
+                        <li class="gallery-item gallery-item-tall"><img src="https://picsum.photos/id/434/800/1000" width="800" height="1000" alt="A wooden pier reaching into a forest lake" loading="lazy"><span class="gallery-caption">The quiet shore</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access -->
+        <section class="access" id="access">
+            <div class="container">
+                <div class="access-layout">
+                    <div class="access-text">
+                        <p class="kicker reveal"><span class="kicker-jp" lang="ja">交通</span>Access</p>
+                        <h2 class="section-title reveal">Two hours, <em>and a world away.</em></h2>
+                        <p class="section-lead reveal">Kiri sits at the end of a forest road above Hakuba village. We collect every guest from Nagano Station.</p>
+                        <ol class="route">
+                            <li class="route-step reveal">
+                                <span class="route-time">80 min</span>
+                                <span class="route-label">Tokyo → Nagano<small>Hokuriku Shinkansen</small></span>
+                            </li>
+                            <li class="route-step reveal">
+                                <span class="route-time">60 min</span>
+                                <span class="route-label">Nagano → Kiri<small>Complimentary private car</small></span>
+                            </li>
+                        </ol>
+                        <address class="access-address reveal">
+                            Kiri Retreat<br>
+                            0000 Hokujo, Hakuba-mura, Kitaazumi-gun, Nagano<br>
+                            <span lang="ja">長野県北安曇郡白馬村北城0000</span>
+                        </address>
+                    </div>
+                    <div class="access-map reveal" aria-hidden="true">
+                        <svg class="map-svg" viewBox="0 0 400 440">
+                            <g class="map-contours">
+                                <path d="M40 120 C90 60 190 50 250 90 C320 130 360 200 330 260 C300 320 210 340 150 310 C80 280 10 190 40 120 Z" />
+                                <path d="M75 135 C110 92 185 85 232 112 C285 142 312 196 290 240 C268 284 205 298 160 276 C108 252 52 182 75 135 Z" />
+                                <path d="M110 148 C135 122 180 118 212 136 C248 156 266 192 252 222 C238 252 196 260 166 246 C130 230 92 178 110 148 Z" />
+                                <path d="M145 162 C160 148 184 148 200 158 C220 170 230 190 222 206 C214 222 190 226 174 218 C154 208 134 180 145 162 Z" />
+                            </g>
+                            <path class="map-route" d="M330 400 C300 360 300 330 270 300 C240 270 250 230 220 205 C190 180 170 160 150 120 C135 92 120 74 110 56" />
+                            <g class="map-point map-point-tokyo">
+                                <circle cx="330" cy="400" r="5" />
+                                <text x="312" y="404" text-anchor="end">Tokyo</text>
+                            </g>
+                            <g class="map-point map-point-nagano">
+                                <circle cx="220" cy="205" r="5" />
+                                <text x="234" y="209">Nagano</text>
+                            </g>
+                            <g class="map-point map-point-kiri">
+                                <circle class="map-pulse" cx="110" cy="56" r="6" />
+                                <circle cx="110" cy="56" r="6" />
+                                <text x="126" y="52">Kiri Retreat</text>
+                                <text class="map-jp" x="126" y="72">白馬</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking -->
+        <section class="booking" id="booking">
+            <div class="booking-media" data-parallax-section>
+                <img src="https://picsum.photos/id/930/1920/1300" width="1920" height="1300" alt="" loading="lazy">
+            </div>
+            <div class="container">
+                <div class="booking-layout">
+                    <div class="booking-text">
+                        <p class="kicker kicker-light reveal"><span class="kicker-jp" lang="ja">ご予約</span>Reservations</p>
+                        <h2 class="booking-title reveal">Let the mist <em>find you.</em></h2>
+                        <p class="booking-lead reveal">Best rates when you book direct, with a late check-out and a welcome tea ceremony on arrival.</p>
+                    </div>
+                    <form class="booking-form reveal" novalidate>
+                        <div class="form-row">
+                            <label class="field">
+                                <span class="field-label">Check-in</span>
+                                <input class="field-input" type="date" name="checkin" required>
+                            </label>
+                            <label class="field">
+                                <span class="field-label">Check-out</span>
+                                <input class="field-input" type="date" name="checkout" required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="field">
+                                <span class="field-label" id="guests-label">Guests</span>
+                                <div class="stepper" role="group" aria-labelledby="guests-label">
+                                    <button class="stepper-btn" type="button" data-step="-1" aria-label="Fewer guests">−</button>
+                                    <output class="stepper-value" name="guests">2</output>
+                                    <button class="stepper-btn" type="button" data-step="1" aria-label="More guests">+</button>
+                                </div>
+                            </div>
+                            <label class="field">
+                                <span class="field-label">Room</span>
+                                <select class="field-input" name="room">
+                                    <option value="68000">Mist Room</option>
+                                    <option value="98000" selected>Hinoki Suite</option>
+                                    <option value="168000">Lake House</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-summary">
+                            <p class="form-total"><span class="form-total-label">Estimated total</span><span class="form-total-value" aria-live="polite">—</span></p>
+                            <button class="btn btn-book form-submit" type="submit">Check availability</button>
+                        </div>
+                        <p class="form-message" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <a class="logo logo-footer" href="#top" aria-label="Kiri Retreat, back to top">
+                    <svg class="logo-icon" viewBox="0 0 56 56" aria-hidden="true"><use href="#logo-mark" /></svg>
+                    <span class="logo-text">
+                        <span class="logo-name">KIRI</span>
+                        <span class="logo-sub">Retreat <span class="logo-jp" lang="ja">霧</span></span>
+                    </span>
+                </a>
+                <nav class="footer-nav" aria-label="Footer">
+                    <ul>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#onsen">Onsen</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#seasons">Seasons</a></li>
+                        <li><a href="#access">Access</a></li>
+                        <li><a href="#booking">Book</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <p>Hakuba, Nagano, Japan</p>
+                    <p>+81 (0)261-00-0000</p>
+                    <p>stay@kiri-retreat.example</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Kiri Retreat <span lang="ja">霧の宿</span></p>
+                <p class="footer-credit">Demo site by <a href="../../index.html">David Childerhose</a> — Kiri Retreat is a fictional brand. Photos: Unsplash via Picsum.</p>
+            </div>
+        </div>
+        <p class="footer-giant" aria-hidden="true">KIRI</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

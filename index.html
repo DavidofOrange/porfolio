@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>David Childerhose — Front-End Developer in Tokyo</title>
+        <meta
+            name="description"
+            content="David Childerhose is a Tokyo-based front-end developer and AWS Certified Cloud Practitioner building corporate sites, WordPress themes, landing pages and PHP upgrades."
+        />
+        <meta name="theme-color" content="#0a1630" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="common/css/common.css" />
+        <link rel="stylesheet" href="css/index.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <canvas id="starfield" aria-hidden="true"></canvas>
+
+            <noscript>
+                <p class="noscript-message">
+                    This site needs JavaScript turned on to show its content.
+                </p>
+            </noscript>
+
+            <div id="app" v-cloak>
+                <div class="scroll-progress" aria-hidden="true">
+                    <span
+                        class="scroll-progress-bar"
+                        :style="{ '--progress': progress }"
+                    ></span>
+                </div>
+
+                <header id="header" :class="{ 'is-scrolled': scrolled }">
+                    <a class="logo" href="#hero" @click="menuOpen = false">
+                        <span class="logo-mark">DC</span>
+                        <span class="logo-name"
+                            >{{ profile.firstName }} {{ profile.lastName
+                            }}</span
+                        >
+                    </a>
+
+                    <nav
+                        id="navigation"
+                        :class="{ 'is-open': menuOpen }"
+                        aria-label="Main"
+                    >
+                        <ul class="nav-list">
+                            <li
+                                class="nav-item"
+                                v-for="(item, i) in navItems"
+                                :key="item.id"
+                            >
+                                <a
+                                    :href="'#' + item.id"
+                                    :class="{ 'is-active': active === item.id }"
+                                    @click="menuOpen = false"
+                                >
+                                    <span class="nav-num">0{{ i + 1 }}</span>{{
+                                    item.label }}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <button
+                        class="nav-toggle"
+                        :class="{ 'is-open': menuOpen }"
+                        type="button"
+                        :aria-expanded="menuOpen"
+                        aria-controls="navigation"
+                        @click="menuOpen = !menuOpen"
+                    >
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                        <span class="visually-hidden">Menu</span>
+                    </button>
+                </header>
+
+                <main id="contents">
+                    <!-- Hero -->
+                    <section id="hero" class="page-section" data-section>
+                        <div class="hero-astrolabe" aria-hidden="true">
+                            <span class="astrolabe-ring astrolabe-outer"></span>
+                            <span class="astrolabe-ring astrolabe-ticks"></span>
+                            <span class="astrolabe-ring astrolabe-inner"></span>
+                            <span class="astrolabe-ring astrolabe-core"></span>
+                        </div>
+
+                        <div class="page-inner hero-inner">
+                            <p class="hero-kicker" v-reveal>
+                                Portfolio &middot; {{ profile.location }}
+                            </p>
+                            <h1 class="hero-title" v-reveal="100">
+                                <span class="hero-first"
+                                    >{{ profile.firstName }}</span
+                                >
+                                <span class="hero-last"
+                                    >{{ profile.lastName }}</span
+                                >
+                            </h1>
+                            <div class="hero-meta" v-reveal="200">
+                                <p class="hero-role">{{ profile.role }}</p>
+                                <a class="hero-badge" href="#certified">
+                                    <img
+                                        class="hero-badge-img"
+                                        :src="certification.badge"
+                                        alt=""
+                                        width="64"
+                                        height="64"
+                                    />
+                                    <span class="hero-badge-text"
+                                        >{{ certification.name }}</span
+                                    >
+                                </a>
+                            </div>
+                            <p class="hero-typed" v-reveal="300">
+                                I build
+                                <span class="typed-text">{{ typed }}</span
+                                ><span
+                                    class="typed-caret"
+                                    aria-hidden="true"
+                                ></span>
+                            </p>
+                            <div class="hero-actions" v-reveal="400">
+                                <a class="btn btn-gold" href="#work"
+                                    >See my work</a
+                                >
+                                <a class="btn btn-ghost" href="#contact"
+                                    >Get in touch</a
+                                >
+                            </div>
+                            <div class="hero-figure pc-off">
+                                <img
+                                    src="img/point-down.png"
+                                    alt="Illustration of David pointing down"
+                                    width="1086"
+                                    height="1448"
+                                />
+                            </div>
+                        </div>
+
+                        <a class="scroll-cue" href="#about">
+                            <span class="scroll-cue-text">Scroll</span>
+                            <span class="scroll-cue-line"></span>
+                        </a>
+                    </section>
+
+                    <!-- About -->
+                    <section id="about" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">01 /</p>
+                                <h2 class="section-title">Who <em>I am</em></h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <div class="about-body">
+                                <div class="about-text">
+                                    <p
+                                        v-for="(paragraph, i) in about"
+                                        :key="i"
+                                        v-reveal="i * 120"
+                                    >
+                                        {{ paragraph }}
+                                    </p>
+
+                                    <ul class="about-stats" v-reveal="300">
+                                        <li
+                                            class="about-stat"
+                                            v-for="stat in stats"
+                                            :key="stat.label"
+                                        >
+                                            <span class="about-stat-value"
+                                                >{{ stat.value }}</span
+                                            >
+                                            <span class="about-stat-label"
+                                                >{{ stat.label }}</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="id-card" v-reveal="200">
+                                    <div class="id-card-top">
+                                        <span class="id-card-label"
+                                            >Crew Pass</span
+                                        >
+                                        <span class="id-card-no"
+                                            >No. DC&#8209;001</span
+                                        >
+                                    </div>
+                                    <div class="id-card-seal">
+                                        <span class="id-card-seal-text"
+                                            >DC</span
+                                        >
+                                    </div>
+                                    <dl class="id-card-list">
+                                        <div class="id-card-row">
+                                            <dt>Name</dt>
+                                            <dd>
+                                                {{ profile.firstName }} {{
+                                                profile.lastName }}
+                                            </dd>
+                                        </div>
+                                        <div class="id-card-row">
+                                            <dt>Role</dt>
+                                            <dd>{{ profile.role }}</dd>
+                                        </div>
+                                        <div class="id-card-row">
+                                            <dt>Based in</dt>
+                                            <dd>{{ profile.location }}</dd>
+                                        </div>
+                                        <div class="id-card-row">
+                                            <dt>Currently</dt>
+                                            <dd>{{ profile.company }}</dd>
+                                        </div>
+                                        <div class="id-card-row">
+                                            <dt>Certified</dt>
+                                            <dd>AWS Cloud Practitioner</dd>
+                                        </div>
+                                    </dl>
+                                    <p class="id-card-status">
+                                        <span class="status-dot"></span>{{
+                                        profile.status }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Services -->
+                    <section id="services" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">02 /</p>
+                                <h2 class="section-title">
+                                    How I can <em>help</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <ul class="service-list">
+                                <li
+                                    class="service-card"
+                                    v-for="(service, i) in services"
+                                    :key="service.title"
+                                    v-reveal="(i % 3) * 120"
+                                >
+                                    <span class="service-num" aria-hidden="true"
+                                        >{{ romans[i] }}</span
+                                    >
+                                    <h3 class="service-title">
+                                        {{ service.title }}
+                                    </h3>
+                                    <p class="service-text">
+                                        {{ service.text }}
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Skills -->
+                    <section id="skills" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">03 /</p>
+                                <h2 class="section-title">
+                                    My <em>toolkit</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <skill-constellation
+                                :skills="skills"
+                                :groups="skillGroups"
+                                v-reveal="100"
+                            ></skill-constellation>
+                        </div>
+                    </section>
+
+                    <!-- Certification -->
+                    <section id="certified" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">04 /</p>
+                                <h2 class="section-title">
+                                    Cloud <em>certified</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <div class="cert" v-reveal="100">
+                                <div class="cert-seal">
+                                    <span
+                                        class="cert-ring cert-ring-text"
+                                        aria-hidden="true"
+                                    >
+                                        <svg
+                                            class="cert-ring-svg"
+                                            viewBox="0 0 200 200"
+                                        >
+                                            <defs>
+                                                <path
+                                                    id="cert-circle"
+                                                    d="M100,100 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0"
+                                                ></path>
+                                            </defs>
+                                            <text
+                                                class="cert-ring-label"
+                                                font-size="12.5"
+                                                textLength="526"
+                                                lengthAdjust="spacing"
+                                            >
+                                                <textPath href="#cert-circle">
+                                                    AWS CERTIFIED · CLOUD
+                                                    PRACTITIONER · VERIFIED ·
+                                                    2026 ·
+                                                </textPath>
+                                            </text>
+                                        </svg>
+                                    </span>
+                                    <span
+                                        class="cert-ring cert-ring-line"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <img
+                                        class="cert-badge"
+                                        :src="certification.badge"
+                                        :alt="certification.name + ' badge'"
+                                        width="350"
+                                        height="350"
+                                    />
+                                </div>
+
+                                <div class="cert-body">
+                                    <p class="cert-level">
+                                        {{ certification.level }} &middot;
+                                        Amazon Web Services
+                                    </p>
+                                    <h3 class="cert-name">
+                                        {{ certification.name }}
+                                    </h3>
+                                    <p class="cert-text">
+                                        {{ certification.text }}
+                                    </p>
+                                    <ul class="cert-points">
+                                        <li
+                                            class="cert-point"
+                                            v-for="point in certification.points"
+                                            :key="point"
+                                        >
+                                            {{ point }}
+                                        </li>
+                                    </ul>
+                                    <dl class="cert-meta">
+                                        <div class="cert-meta-item">
+                                            <dt>Issued</dt>
+                                            <dd>{{ certification.issued }}</dd>
+                                        </div>
+                                        <div class="cert-meta-item">
+                                            <dt>Valid until</dt>
+                                            <dd>{{ certification.expires }}</dd>
+                                        </div>
+                                        <div
+                                            class="cert-meta-item cert-meta-wide"
+                                        >
+                                            <dt>Validation no.</dt>
+                                            <dd>
+                                                {{ certification.validation }}
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                    <div class="cert-actions">
+                                        <a
+                                            class="btn btn-gold"
+                                            :href="certification.certificate"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >View certificate</a
+                                        >
+                                        <a
+                                            class="btn btn-ghost"
+                                            :href="certification.verifyUrl"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >Verify at AWS &#8599;</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Work -->
+                    <section id="work" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">05 /</p>
+                                <h2 class="section-title">
+                                    Things <em>I've built</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <div class="work-list">
+                                <article
+                                    class="project-card"
+                                    :class="{ 'is-featured': project.featured, 'is-reversed': project.reversed }"
+                                    v-for="(project, i) in projects"
+                                    :key="project.title"
+                                    v-reveal="i * 120"
+                                >
+                                    <a
+                                        class="project-link"
+                                        :href="project.url"
+                                        :target="project.url.startsWith('#') ? null : '_blank'"
+                                        :rel="project.url.startsWith('#') ? null : 'noopener'"
+                                    >
+                                        <div
+                                            class="project-visual"
+                                            :class="'visual-' + project.visual"
+                                            aria-hidden="true"
+                                        >
+                                            <div
+                                                class="visual-browser"
+                                                v-if="project.image"
+                                            >
+                                                <div class="visual-browser-bar">
+                                                    <span
+                                                        class="visual-browser-dot"
+                                                    ></span>
+                                                    <span
+                                                        class="visual-browser-dot"
+                                                    ></span>
+                                                    <span
+                                                        class="visual-browser-dot"
+                                                    ></span>
+                                                </div>
+                                                <img
+                                                    class="visual-browser-img"
+                                                    :src="project.image"
+                                                    alt=""
+                                                    width="1440"
+                                                    height="900"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+                                            <template v-else>
+                                                <span class="visual-orbit"
+                                                    ><span
+                                                        class="visual-moon"
+                                                    ></span
+                                                ></span>
+                                                <span
+                                                    class="visual-core"
+                                                ></span>
+                                            </template>
+                                        </div>
+                                        <div class="project-body">
+                                            <p class="project-kind">
+                                                {{ project.kind }}
+                                            </p>
+                                            <h3 class="project-title">
+                                                {{ project.title }}<span
+                                                    class="project-arrow"
+                                                    aria-hidden="true"
+                                                    >&#8599;</span
+                                                >
+                                            </h3>
+                                            <p class="project-text">
+                                                {{ project.description }}
+                                            </p>
+                                            <ul class="project-tags">
+                                                <li
+                                                    class="project-tag"
+                                                    v-for="tag in project.tags"
+                                                    :key="tag"
+                                                >
+                                                    {{ tag }}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Journey -->
+                    <section id="journey" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">06 /</p>
+                                <h2 class="section-title">
+                                    The <em>journey</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <ol class="timeline">
+                                <li
+                                    class="timeline-item"
+                                    :class="{ 'is-highlight': step.highlight }"
+                                    v-for="(step, i) in journey"
+                                    :key="i"
+                                    v-reveal="i * 120"
+                                >
+                                    <p class="timeline-period">
+                                        {{ step.period }}
+                                    </p>
+                                    <h3 class="timeline-title">
+                                        {{ step.title }}
+                                    </h3>
+                                    <p class="timeline-place">
+                                        {{ step.place }}
+                                    </p>
+                                    <p class="timeline-text">{{ step.text }}</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Contact -->
+                    <section id="contact" class="page-section" data-section>
+                        <div class="page-inner">
+                            <div class="section-head" v-reveal>
+                                <p class="section-num">07 /</p>
+                                <h2 class="section-title">
+                                    Let's <em>talk</em>
+                                </h2>
+                                <span class="section-rule"></span>
+                            </div>
+
+                            <div class="contact-body">
+                                <p class="contact-lead" v-reveal>
+                                    A site to build, fix or upgrade?<br />Let&#39;s
+                                    make it <em>shine.</em>
+                                </p>
+                                <a
+                                    class="contact-email"
+                                    :href="'mailto:' + profile.email"
+                                    v-reveal="150"
+                                    >{{ profile.email }}</a
+                                >
+                                <ul class="contact-links" v-reveal="250">
+                                    <li class="contact-item">
+                                        <a
+                                            :href="profile.linkedin"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >LinkedIn &#8599;</a
+                                        >
+                                    </li>
+                                    <li
+                                        class="contact-item"
+                                        v-if="profile.github"
+                                    >
+                                        <a
+                                            :href="profile.github"
+                                            target="_blank"
+                                            rel="noopener"
+                                            >GitHub &#8599;</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <footer id="footer">
+                    <div class="page-inner footer-inner">
+                        <p class="footer-copy">
+                            &copy; {{ year }} {{ profile.firstName }} {{
+                            profile.lastName }}
+                        </p>
+                        <p class="footer-note">
+                            Built with Vue 3, native CSS &amp; a touch of gold.
+                        </p>
+                    </div>
+                </footer>
+
+                <!-- The guide: David follows you down the page and points at what matters -->
+                <aside
+                    class="guide"
+                    :class="['pose-' + pose, { 'is-talking': talking, 'is-hero': active === 'hero', 'is-hidden': menuOpen }]"
+                    aria-label="Guide"
+                >
+                    <div class="guide-bubble" aria-live="polite">
+                        <transition name="bubble" mode="out-in">
+                            <p class="guide-line" :key="active">
+                                {{ guideLine }}
+                            </p>
+                        </transition>
+                    </div>
+                    <button
+                        class="guide-figure"
+                        type="button"
+                        :aria-label="pose === 'up' ? 'Back to top' : 'Go to the next section'"
+                        @click="guideClick"
+                    >
+                        <img
+                            v-for="p in poses"
+                            :key="p"
+                            class="guide-img"
+                            :class="{ 'is-active': pose === p }"
+                            :src="'img/point-' + p + '.png'"
+                            alt=""
+                            width="1086"
+                            height="1448"
+                        />
+                    </button>
+                </aside>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/starfield.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
