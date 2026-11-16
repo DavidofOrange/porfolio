@@ -228,6 +228,26 @@
         });
     });
 
+    /* ---------- Product rail progress (SP horizontal scroll) ---------- */
+    var productList = document.querySelector(".product-list");
+    var productBar = document.querySelector("[data-product-progress]");
+
+    function updateProductProgress() {
+        var cw = productList.clientWidth;
+        var sw = productList.scrollWidth;
+        var size = sw > 0 ? Math.min(cw / sw, 1) : 1;
+        productBar.style.width = (size * 100).toFixed(2) + "%";
+        productBar.style.transform = "translate3d(" + (cw > 0 ? (productList.scrollLeft / cw) * 100 : 0).toFixed(2) + "%,0,0)";
+    }
+
+    if (productList && productBar) {
+        productList.addEventListener("scroll", function () {
+            window.requestAnimationFrame(updateProductProgress);
+        }, { passive: true });
+        window.addEventListener("resize", updateProductProgress);
+        updateProductProgress();
+    }
+
     /* ---------- Subscription plan builder ---------- */
     var plan = { frequency: 2, bags: 2 };
     var pricePerBag = 2160;

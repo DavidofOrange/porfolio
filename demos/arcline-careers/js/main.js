@@ -54,6 +54,19 @@
         }
     }
 
+    /* ---------- Hero: live "routed today" ticker ---------- */
+    var liveCount = document.querySelector("[data-live-count]");
+    if (liveCount && !reduceMotion) {
+        var liveValue = parseInt(liveCount.getAttribute("data-live-count"), 10) || 0;
+        setInterval(function () {
+            if (document.hidden) {
+                return;
+            }
+            liveValue += 3 + Math.floor(Math.random() * 14);
+            liveCount.textContent = liveValue.toLocaleString("en-US");
+        }, 1400);
+    }
+
     /* ---------- Header: hide on scroll down, show on scroll up + progress ---------- */
     var header = document.getElementById("site-header");
     var progressBar = document.querySelector(".scroll-progress-bar");
@@ -136,7 +149,7 @@
             }
         });
         window.addEventListener("resize", function () {
-            if (window.innerWidth > 767 && mobileMenu.classList.contains("is-open")) {
+            if (window.innerWidth > 1023 && mobileMenu.classList.contains("is-open")) {
                 setMenu(false);
             }
         });
@@ -360,9 +373,46 @@
             });
             tab.classList.add("is-active");
             tab.setAttribute("aria-pressed", "true");
+            revealTab(tab);
             applyFilter(tab.getAttribute("data-filter"));
         });
     });
+
+    /* On phones the filter row scrolls sideways: keep the chosen tab in view
+       and drop the edge fade once the end of the row is reached */
+    var filterRow = document.querySelector(".job-filters");
+
+    function revealTab(tab) {
+        if (!filterRow || filterRow.scrollWidth <= filterRow.clientWidth) {
+            return;
+        }
+        var rowRect = filterRow.getBoundingClientRect();
+        var tabRect = tab.getBoundingClientRect();
+        var pad = 20;
+        var delta = 0;
+        if (tabRect.right > rowRect.right - pad * 2) {
+            delta = tabRect.right - rowRect.right + pad * 2;
+        } else if (tabRect.left < rowRect.left + pad) {
+            delta = tabRect.left - rowRect.left - pad;
+        }
+        if (delta !== 0) {
+            filterRow.scrollBy({ left: delta, behavior: reduceMotion ? "auto" : "smooth" });
+        }
+    }
+
+    function updateFilterFade() {
+        if (!filterRow) {
+            return;
+        }
+        var atEnd = filterRow.scrollLeft + filterRow.clientWidth >= filterRow.scrollWidth - 4;
+        filterRow.classList.toggle("is-scrolled-end", atEnd);
+    }
+
+    if (filterRow) {
+        filterRow.addEventListener("scroll", updateFilterFade, { passive: true });
+        window.addEventListener("resize", updateFilterFade);
+        updateFilterFade();
+    }
 
     /* ---------- FAQ accordion (smooth height) ---------- */
     document.querySelectorAll(".faq-item").forEach(function (item) {

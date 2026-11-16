@@ -9,8 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='11' fill='%23241710'/%3E%3Cg fill='%23f3e9da'%3E%3Ccircle cx='13' cy='26' r='7'/%3E%3Ccircle cx='22.5' cy='19' r='10'/%3E%3Ccircle cx='31.5' cy='25.5' r='7.5'/%3E%3Crect x='13' y='24' width='18.5' height='9'/%3E%3C/g%3E%3Cellipse cx='22' cy='24' rx='4.6' ry='6.6' transform='rotate(28 22 24)' fill='%23c46a2f'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://picsum.photos">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script>document.documentElement.classList.add("js");</script>
@@ -90,7 +89,7 @@
         <!-- Hero -->
         <section class="hero" id="hero">
             <div class="hero-media" data-hero-parallax>
-                <img class="hero-image" src="https://picsum.photos/id/1060/1920/1200" width="1920" height="1200" alt="ハンドドリップでコーヒーを淹れている様子" fetchpriority="high">
+                <img class="hero-image" src="img/hero-pourover.jpg" width="2000" height="3000" alt="細口のケトルで、ハンドドリップのコーヒーを淹れている様子" fetchpriority="high">
             </div>
             <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -111,7 +110,7 @@
             <div class="hero-content container">
                 <p class="hero-kicker">
                     <span class="hero-kicker-pill">清澄白河の焙煎所</span>
-                    <span class="hero-kicker-en">Small-batch roastery · Tokyo</span>
+                    <span class="hero-kicker-en">Small-batch roastery, Tokyo</span>
                 </p>
                 <h1 class="hero-title">
                     <span class="hero-line"><span class="hero-line-inner">ゆっくり焼いた、</span></span>
@@ -132,7 +131,7 @@
 
             <div class="hero-roasting">
                 <span class="roasting-dot" aria-hidden="true"></span>
-                <p class="roasting-text"><span class="roasting-label">Now roasting</span>エチオピア グジ「ハナ」</p>
+                <p class="roasting-text"><span class="roasting-label">本日の焙煎</span>エチオピア グジ「ハナ」</p>
             </div>
 
             <a class="hero-scroll" href="#marquee" aria-label="コンテンツへスクロール">
@@ -172,15 +171,16 @@
         </section>
 
         <!-- Story -->
-        <section class="story" id="story">
+        <section class="story is-sheet" id="story">
             <div class="story-inner container">
                 <div class="story-media">
                     <figure class="story-figure story-figure-main reveal-image" data-reveal>
-                        <img src="https://picsum.photos/id/425/900/1100" width="900" height="1100" alt="明るい台の上に広げた焙煎したてのコーヒー豆" loading="lazy" data-parallax="0.08">
+                        <img src="img/story-roaster.jpg" width="1100" height="733" alt="焙煎機のなかで撹拌される、焼きたてのコーヒー豆" loading="lazy" data-parallax="0.08">
                     </figure>
                     <figure class="story-figure story-figure-sub reveal-image" data-reveal>
-                        <img src="https://picsum.photos/id/766/600/600" width="600" height="600" alt="深く焙煎したコーヒー豆のアップ" loading="lazy" data-parallax="-0.06">
+                        <img src="img/story-beans-dark.jpg" width="800" height="1200" alt="艶のある深煎りのコーヒー豆のアップ" loading="lazy" data-parallax="-0.06">
                     </figure>
+                    <p class="story-vertical" aria-hidden="true">焙煎は、待つ仕事。</p>
                     <div class="story-badge" aria-hidden="true">
                         <svg class="story-badge-ring" viewBox="0 0 120 120">
                             <defs><path id="badge-circle" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
@@ -192,7 +192,7 @@
 
                 <div class="story-text">
                     <p class="section-kicker" data-reveal><span class="kicker-num">01</span><span class="kicker-en">Our Craft</span></p>
-                    <h2 class="section-title" data-reveal>一度に焼くのは、<br><em>12kg</em>だけ。</h2>
+                    <h2 class="section-title" data-reveal>一度に焼くのは、<br><em class="title-num">12kg</em>だけ。</h2>
                     <div class="story-body" data-reveal>
                         <p>Kumoのはじまりは2016年。古い米倉庫の片隅に、中古のドラム式焙煎機を一台置いたところから始まりました。少しずつ、時間をかけてじっくりと。ハゼの音に耳を澄ませる焙煎は、いまも変わりません。</p>
                         <p>毎年訪れる数軒の農園から直接買い付け、その週に新鮮なまま届けられる分だけを焼いています。産地の個性が感じられる浅さで、けれどお茶のように軽すぎない。それが私たちの目指す「雲」の味わいです。</p>
@@ -222,7 +222,7 @@
                 <div class="section-head">
                     <div class="section-head-main">
                         <p class="section-kicker" data-reveal><span class="kicker-num">02</span><span class="kicker-en">This Season</span></p>
-                        <h2 class="section-title" data-reveal>今季のおすすめ、<br><em>4</em>つの豆。</h2>
+                        <h2 class="section-title" data-reveal>今季のおすすめ、<br><em class="title-num">4</em>つの豆。</h2>
                     </div>
                     <p class="section-lead" data-reveal>すべて200g入り。毎週火曜・金曜にご注文分だけを焙煎し、アロマバルブ付きの袋に詰めてお届けします。</p>
                 </div>
@@ -230,8 +230,9 @@
                 <div class="product-list" data-stagger>
                     <article class="product-card" data-reveal>
                         <div class="product-media">
-                            <img src="https://picsum.photos/id/425/700/800" width="700" height="800" alt="浅煎りのエチオピアのコーヒー豆" loading="lazy">
+                            <img src="img/bean-ethiopia.jpg" width="900" height="1200" alt="白い陶器の器に入ったコーヒー豆" loading="lazy">
                             <span class="product-tag">浅煎り</span>
+                            <span class="product-index">No.01</span>
                         </div>
                         <div class="product-body">
                             <p class="product-origin">Ethiopia · Guji</p>
@@ -254,8 +255,9 @@
 
                     <article class="product-card" data-reveal>
                         <div class="product-media">
-                            <img src="https://picsum.photos/id/766/700/800" width="700" height="800" alt="中煎りのコロンビアのコーヒー豆" loading="lazy">
+                            <img src="img/bean-colombia.jpg" width="900" height="1350" alt="水槽に浸された、赤く熟したコーヒーチェリー" loading="lazy">
                             <span class="product-tag">中煎り</span>
+                            <span class="product-index">No.02</span>
                         </div>
                         <div class="product-body">
                             <p class="product-origin">Colombia · Huila</p>
@@ -278,8 +280,9 @@
 
                     <article class="product-card" data-reveal>
                         <div class="product-media">
-                            <img src="https://picsum.photos/id/63/700/800" width="700" height="800" alt="赤い背景に置かれたコーヒーカップを真上から" loading="lazy">
+                            <img src="img/bean-kenya.jpg" width="900" height="600" alt="ステンレスのスコップと、袋いっぱいの生豆" loading="lazy">
                             <span class="product-tag">浅煎り</span>
+                            <span class="product-index">No.03</span>
                         </div>
                         <div class="product-body">
                             <p class="product-origin">Kenya · Nyeri</p>
@@ -302,8 +305,9 @@
 
                     <article class="product-card" data-reveal>
                         <div class="product-media">
-                            <img src="https://picsum.photos/id/30/700/800" width="700" height="800" alt="テーブルに置かれた温かみのあるマグカップ" loading="lazy">
+                            <img src="img/bean-house-blend.jpg" width="900" height="600" alt="木のテーブルに置かれた、ガラスのカップのコーヒー" loading="lazy">
                             <span class="product-tag">中深煎り</span>
+                            <span class="product-index">No.04</span>
                         </div>
                         <div class="product-body">
                             <p class="product-origin">House Blend</p>
@@ -324,11 +328,15 @@
                         </div>
                     </article>
                 </div>
+                <div class="product-progress" aria-hidden="true">
+                    <span class="product-progress-track"><span class="product-progress-bar" data-product-progress></span></span>
+                    <span class="product-progress-text">横にスワイプ</span>
+                </div>
             </div>
         </section>
 
         <!-- Subscription -->
-        <section class="subscribe" id="subscribe">
+        <section class="subscribe is-sheet" id="subscribe">
             <div class="container">
                 <div class="section-head">
                     <div class="section-head-main">
@@ -371,7 +379,7 @@
 
                 <div class="plan" data-reveal>
                     <figure class="plan-media">
-                        <img src="https://picsum.photos/id/882/900/900" width="900" height="900" alt="テラコッタタイルの上に置かれたコーヒーと本" loading="lazy" data-parallax="0.06">
+                        <img src="img/subscribe-home.jpg" width="1100" height="733" alt="リネンのベッドで、本を片手にコーヒーを楽しむひととき" loading="lazy" data-parallax="0.06">
                         <span class="plan-badge">定期便<strong>10%</strong>OFF</span>
                     </figure>
                     <div class="plan-body">
@@ -405,20 +413,20 @@
         </section>
 
         <!-- Visit -->
-        <section class="visit" id="visit">
+        <section class="visit is-sheet" id="visit">
             <div class="visit-inner container">
                 <div class="visit-media">
                     <figure class="visit-figure visit-figure-main reveal-image" data-reveal>
-                        <img src="https://picsum.photos/id/42/1200/900" width="1200" height="900" alt="長い木のテーブルがあるカフェの店内" loading="lazy" data-parallax="0.08">
+                        <img src="img/visit-cafe.jpg" width="1600" height="1067" alt="水辺を望む大きな窓と、木のテーブルが並ぶ静かなカフェ" loading="lazy" data-parallax="0.08">
                     </figure>
                     <figure class="visit-figure visit-figure-sub reveal-image" data-reveal>
-                        <img src="https://picsum.photos/id/513/600/700" width="600" height="700" alt="明るいカフェでくつろぐお客さま" loading="lazy">
+                        <img src="img/visit-latte.jpg" width="900" height="504" alt="カップにラテアートを注いでいる手元" loading="lazy">
                     </figure>
                 </div>
                 <div class="visit-text">
                     <p class="section-kicker" data-reveal><span class="kicker-num">04</span><span class="kicker-en">Visit Us</span></p>
-                    <h2 class="section-title" data-reveal>川のほとりの、<br><em>12</em>席のカフェ。</h2>
-                    <p class="visit-lead" data-reveal>焙煎所の一角は、小さなコーヒースタンドになっています。ガラス越しに焙煎の様子を眺めながら、ハンドドリップを一杯。冷ましたばかりの豆もお持ち帰りいただけます。</p>
+                    <h2 class="section-title" data-reveal>川のほとりの、<br><em class="title-num">12</em>席のカフェ。</h2>
+                    <p class="visit-lead" data-reveal>焙煎所の一角は、小さなコーヒースタンドになっています。ガラス越しに焙煎の様子を眺めながら、ハンドドリップを一杯。焼きたての豆も、その場でお持ち帰りいただけます。</p>
                     <p class="open-status" data-open-status data-reveal><span class="open-status-dot" aria-hidden="true"></span><span class="open-status-text">火曜定休・8:00 – 18:00</span></p>
                     <dl class="visit-info" data-stagger>
                         <div class="visit-info-row" data-reveal>
@@ -499,13 +507,13 @@
         </section>
 
         <!-- Newsletter -->
-        <section class="newsletter" id="newsletter">
+        <section class="newsletter is-sheet" id="newsletter">
             <div class="newsletter-media" aria-hidden="true">
-                <img src="https://picsum.photos/id/755/1600/1000" width="1600" height="1000" alt="" loading="lazy" data-parallax="0.12">
+                <img src="img/newsletter-steam.jpg" width="2000" height="1333" alt="" loading="lazy" data-parallax="0.12">
             </div>
             <div class="newsletter-inner container">
                 <p class="section-kicker" data-reveal><span class="kicker-en">Newsletter</span></p>
-                <h2 class="section-title" data-reveal>はじめての一袋が、<br><em>¥500</em> OFFに。</h2>
+                <h2 class="section-title" data-reveal>はじめての一袋が、<br><em class="title-num">¥500</em> OFFに。</h2>
                 <p class="newsletter-lead" data-reveal>月に一度、新しい産地のこと、おいしい淹れ方、数量限定ロットの先行案内をお届けします。</p>
                 <form class="newsletter-form" data-newsletter data-reveal novalidate>
                     <label class="visually-hidden" for="newsletter-email">メールアドレス</label>
@@ -576,7 +584,7 @@
             <p class="footer-giant" aria-hidden="true">Kumo<span class="footer-giant-jp">雲</span></p>
             <div class="footer-bottom">
                 <p class="footer-copy">© <span data-year>2026</span> Kumo Coffee Roasters</p>
-                <p class="footer-credit">デモサイト制作：<a href="../../index.html">David Childerhose</a> ― Kumo Coffee Roasters は架空のブランドです。写真：Unsplash（Picsum経由）</p>
+                <p class="footer-credit">デモサイト制作：<a href="../../index.html">David Childerhose</a> ― Kumo Coffee Roasters は架空のブランドです。写真：Unsplash</p>
             </div>
         </div>
     </footer>

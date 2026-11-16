@@ -23,9 +23,9 @@
         var(--gold-pale) 70%,
         var(--gold-deep) 100%
     );
-    --font-display: "Cormorant Garamond", "Times New Roman", serif;
-    --font-body: "Manrope", "Noto Sans JP", sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-display: "Newsreader", "Georgia", serif;
+    --font-body: "Geist", "Noto Sans JP", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, monospace;
     --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
     --default-text-color: var(--gold);
 }
@@ -55,6 +55,7 @@ body {
         ),
         var(--navy-950);
     background-attachment: fixed;
+    font-synthesis: none;
     -webkit-font-smoothing: antialiased;
 
     @media screen and (max-width: 767px) {
@@ -194,7 +195,8 @@ a {
     border-radius: 10rem;
     font-family: var(--font-mono);
     font-size: 1.3rem;
-    letter-spacing: 0.2em;
+    font-weight: 500;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     line-height: 1;
     transition:
@@ -203,8 +205,9 @@ a {
         transform 0.3s var(--ease-out);
 
     @media screen and (max-width: 767px) {
-        padding: 1.5rem 2.4rem;
-        font-size: 1.1rem;
+        padding: 1.5rem 2rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.08em;
     }
 
     &:hover {
@@ -266,7 +269,7 @@ a {
             font-family: var(--font-display);
             font-size: 2.2rem;
             font-style: italic;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--gold-light);
             box-shadow:
                 inset 0 0 0 0.4rem var(--navy-950),
@@ -283,13 +286,13 @@ a {
         .logo-name {
             font-family: var(--font-mono);
             font-size: 1.2rem;
-            letter-spacing: 0.3em;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--gold-light);
 
             @media screen and (max-width: 767px) {
-                font-size: 1rem;
-                letter-spacing: 0.2em;
+                font-size: 1.4rem;
+                letter-spacing: 0.1em;
             }
         }
 
@@ -306,8 +309,10 @@ a {
             inset: 0;
             z-index: 1;
             display: flex;
-            align-items: center;
-            padding: 0 3rem;
+            align-items: flex-start;
+            padding: 11rem 3rem 8rem;
+            overflow-y: auto;
+            overscroll-behavior: contain;
             background: rgba(5, 12, 28, 0.97);
             opacity: 0;
             visibility: hidden;
@@ -322,7 +327,7 @@ a {
 
             @media screen and (max-width: 767px) {
                 flex-direction: column;
-                gap: 2.4rem;
+                gap: 0.4rem;
             }
 
             .nav-item {
@@ -334,16 +339,18 @@ a {
                     padding: 0.6rem 0;
                     font-family: var(--font-mono);
                     font-size: 1.3rem;
-                    letter-spacing: 0.2em;
+                    letter-spacing: 0.14em;
                     text-transform: uppercase;
                     color: var(--gold-text);
                     transition: color 0.3s;
 
                     @media screen and (max-width: 767px) {
-                        gap: 1.6rem;
+                        gap: 1.2rem;
+                        padding: 0.5rem 0;
                         font-family: var(--font-display);
-                        font-size: 4rem;
-                        letter-spacing: 0.02em;
+                        font-size: 3.2rem;
+                        line-height: 1.15;
+                        letter-spacing: 0;
                         text-transform: none;
                     }
 
@@ -384,7 +391,7 @@ a {
 
                     @media screen and (max-width: 767px) {
                         font-family: var(--font-mono);
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
                     }
                 }
             }
@@ -395,6 +402,7 @@ a {
         @media screen and (max-width: 767px) {
             opacity: 1;
             visibility: visible;
+            background: var(--navy-950);
         }
     }
 
@@ -451,6 +459,12 @@ a {
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
     }
+}
+
+/* backdrop-filter would trap the fixed menu inside the header bar */
+html.menu-active #header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 /* ------------------------------------------- */
@@ -562,13 +576,15 @@ a {
             margin-bottom: 3.2rem;
             font-family: var(--font-mono);
             font-size: 1.3rem;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.24em;
             text-transform: uppercase;
             color: var(--gold-dim);
 
             @media screen and (max-width: 767px) {
+                gap: 1.2rem;
                 margin-bottom: 2rem;
-                font-size: 1rem;
+                font-size: 1.4rem;
+                letter-spacing: 0.12em;
             }
 
             &::before {
@@ -587,16 +603,19 @@ a {
             display: flex;
             flex-direction: column;
             font-family: var(--font-display);
-            font-size: 17rem;
-            font-weight: 600;
-            line-height: 0.88;
-            letter-spacing: -0.02em;
+            font-size: 16rem;
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -0.035em;
 
             @media screen and (max-width: 767px) {
-                font-size: 6.6rem;
+                font-size: 6rem;
             }
 
             .hero-first {
+                /* gradient text only paints inside the box — pad it so tall letters aren't clipped */
+                padding: 0.14em 0.04em 0.1em 0;
+                margin: -0.14em 0 -0.1em;
                 background: var(--gold-gradient);
                 background-size: 200% auto;
                 -webkit-background-clip: text;
@@ -608,7 +627,7 @@ a {
             .hero-last {
                 padding-left: 0.6em;
                 font-style: italic;
-                font-weight: 500;
+                font-weight: 400;
                 color: transparent;
                 -webkit-text-stroke: 0.1rem var(--gold);
 
@@ -673,13 +692,14 @@ a {
                 .hero-badge-text {
                     font-family: var(--font-mono);
                     font-size: 1.2rem;
-                    letter-spacing: 0.12em;
+                    letter-spacing: 0.08em;
                     text-transform: uppercase;
                     color: var(--gold-pale);
 
                     @media screen and (max-width: 767px) {
-                        font-size: 1rem;
-                        letter-spacing: 0.06em;
+                        font-size: 1.4rem;
+                        line-height: 1.3;
+                        letter-spacing: 0.02em;
                     }
                 }
 
@@ -755,7 +775,7 @@ a {
         .scroll-cue-text {
             font-family: var(--font-mono);
             font-size: 1.1rem;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.24em;
             text-transform: uppercase;
             color: var(--gold-dim);
         }
@@ -799,33 +819,27 @@ a {
     .section-num {
         font-family: var(--font-mono);
         font-size: 1.4rem;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.16em;
         color: var(--gold-dim);
-
-        @media screen and (max-width: 767px) {
-            font-size: 1.1rem;
-        }
     }
 
     .section-title {
         font-family: var(--font-display);
-        font-size: 8.8rem;
-        font-weight: 500;
-        line-height: 1;
+        font-size: 8rem;
+        font-weight: 400;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
         color: var(--gold);
 
         @media screen and (max-width: 767px) {
-            font-size: 4.2rem;
+            font-size: 3.8rem;
         }
 
         & em {
+            font-family: var(--font-display);
             font-style: italic;
-            background: var(--gold-gradient);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: shimmer 10s linear infinite;
+            letter-spacing: 0;
+            color: var(--gold-light);
         }
     }
 
@@ -926,12 +940,13 @@ a {
                 justify-content: space-between;
                 font-family: var(--font-mono);
                 font-size: 1.2rem;
-                letter-spacing: 0.3em;
+                letter-spacing: 0.18em;
                 text-transform: uppercase;
                 color: var(--gold-dim);
 
                 @media screen and (max-width: 767px) {
-                    font-size: 1rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.12em;
                 }
             }
 
@@ -954,7 +969,7 @@ a {
                     font-family: var(--font-display);
                     font-size: 4rem;
                     font-style: italic;
-                    font-weight: 600;
+                    font-weight: 500;
                     color: var(--gold-light);
                 }
             }
@@ -971,9 +986,14 @@ a {
                     & dt {
                         font-family: var(--font-mono);
                         font-size: 1.1rem;
-                        letter-spacing: 0.2em;
+                        letter-spacing: 0.12em;
                         text-transform: uppercase;
                         color: var(--gold-dim);
+
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                            letter-spacing: 0.06em;
+                        }
                     }
 
                     & dd {
@@ -996,12 +1016,13 @@ a {
                 margin-top: 2.8rem;
                 font-family: var(--font-mono);
                 font-size: 1.2rem;
-                letter-spacing: 0.15em;
+                letter-spacing: 0.12em;
                 text-transform: uppercase;
                 color: var(--gold-light);
 
                 @media screen and (max-width: 767px) {
-                    font-size: 1rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.08em;
                 }
 
                 .status-dot {
@@ -1063,6 +1084,24 @@ a {
             stroke: var(--gold-dim);
         }
 
+        .constellation-name {
+            font-family: var(--font-mono);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            fill: var(--gold-dim);
+            opacity: 0.6;
+            transition: fill 0.4s;
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        .constellation-name.is-lit {
+            fill: var(--gold);
+            opacity: 1;
+        }
+
         .constellation-star {
             cursor: pointer;
             opacity: 0.5;
@@ -1089,6 +1128,10 @@ a {
                 font-family: var(--font-mono);
                 fill: var(--gold-pale);
                 letter-spacing: 0.05em;
+                paint-order: stroke;
+                stroke: var(--navy-950);
+                stroke-width: 0.6;
+                stroke-linejoin: round;
 
                 @media screen and (max-width: 767px) {
                     display: none;
@@ -1133,25 +1176,41 @@ a {
             .panel-group {
                 font-family: var(--font-mono);
                 font-size: 1.2rem;
-                letter-spacing: 0.3em;
+                letter-spacing: 0.18em;
                 text-transform: uppercase;
                 color: var(--gold-dim);
+
+                @media screen and (max-width: 767px) {
+                    font-size: 1.4rem;
+                    letter-spacing: 0.12em;
+                }
             }
 
             .panel-name {
                 margin: 0.8rem 0 1.6rem;
                 font-family: var(--font-display);
                 font-size: 6.4rem;
-                font-weight: 600;
+                font-weight: 500;
                 line-height: 1;
-                background: var(--gold-gradient);
-                background-size: 200% auto;
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
+                letter-spacing: -0.025em;
+                color: var(--gold-light);
 
                 @media screen and (max-width: 767px) {
                     font-size: 4rem;
+                }
+            }
+
+            .panel-star {
+                margin-bottom: 1.6rem;
+                font-family: var(--font-mono);
+                font-size: 1.2rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--gold-dim);
+
+                @media screen and (max-width: 767px) {
+                    font-size: 1.4rem;
+                    letter-spacing: 0.08em;
                 }
             }
 
@@ -1172,9 +1231,14 @@ a {
                 margin-bottom: 1rem;
                 font-family: var(--font-mono);
                 font-size: 1.1rem;
-                letter-spacing: 0.25em;
+                letter-spacing: 0.16em;
                 text-transform: uppercase;
                 color: var(--gold-dim);
+
+                @media screen and (max-width: 767px) {
+                    font-size: 1.4rem;
+                    letter-spacing: 0.1em;
+                }
             }
 
             .chip-list {
@@ -1198,7 +1262,7 @@ a {
                         border-color 0.3s;
 
                     @media screen and (max-width: 767px) {
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
                     }
 
                     &:hover {
@@ -1387,6 +1451,37 @@ a {
                 }
             }
 
+            /* horror game: a blood moon in a dark red sky */
+            .project-visual.visual-terror {
+                background: radial-gradient(
+                    ellipse at 50% 110%,
+                    #3a0d10,
+                    #0b0507 75%
+                );
+
+                .visual-core {
+                    background: radial-gradient(
+                        circle at 38% 32%,
+                        #f2b8a8,
+                        #b3261e 45%,
+                        #3d0a0c 90%
+                    );
+                    box-shadow:
+                        0 0 8rem rgba(179, 38, 30, 0.55),
+                        0 0 2rem rgba(242, 184, 168, 0.25);
+                    animation: blood-flicker 6s ease-in-out infinite;
+                }
+
+                .visual-orbit {
+                    border-color: rgba(179, 38, 30, 0.45);
+
+                    .visual-moon {
+                        background: #e8d9cf;
+                        box-shadow: 0 0 2rem rgba(179, 38, 30, 0.8);
+                    }
+                }
+            }
+
             .project-body {
                 display: flex;
                 flex-direction: column;
@@ -1400,12 +1495,57 @@ a {
                 .project-kind {
                     font-family: var(--font-mono);
                     font-size: 1.2rem;
-                    letter-spacing: 0.25em;
+                    letter-spacing: 0.14em;
                     text-transform: uppercase;
                     color: var(--gold-dim);
 
                     @media screen and (max-width: 767px) {
-                        font-size: 1rem;
+                        font-size: 1.4rem;
+                        line-height: 1.5;
+                        letter-spacing: 0.08em;
+                    }
+                }
+
+                /* content warning, e.g. for the horror game */
+                .project-warning {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1.2rem;
+                    margin-top: 1.6rem;
+                    padding: 1.2rem 1.6rem;
+                    border: 0.1rem solid rgba(179, 38, 30, 0.6);
+                    border-radius: 0.8rem;
+                    background: rgba(179, 38, 30, 0.12);
+                    font-size: 1.5rem;
+                    line-height: 1.5;
+                    color: #f2d6cf;
+
+                    @media screen and (max-width: 767px) {
+                        gap: 1rem;
+                        padding: 1.2rem 1.4rem;
+                        font-size: 1.4rem;
+                    }
+
+                    .project-warning-icon {
+                        display: flex;
+                        flex-shrink: 0;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        margin-top: 0.1rem;
+                        border-radius: 50%;
+                        background: #b3261e;
+                        font-family: var(--font-mono);
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        line-height: 1;
+                        color: #fff;
+                    }
+
+                    & strong {
+                        font-weight: 600;
+                        color: #ffb4a6;
                     }
                 }
 
@@ -1417,8 +1557,9 @@ a {
                     margin: 1rem 0 1.6rem;
                     font-family: var(--font-display);
                     font-size: 4.4rem;
-                    font-weight: 600;
+                    font-weight: 400;
                     line-height: 1.1;
+                    letter-spacing: -0.01em;
                     color: var(--gold-light);
 
                     @media screen and (max-width: 767px) {
@@ -1465,7 +1606,8 @@ a {
                         color: var(--gold-pale);
 
                         @media screen and (max-width: 767px) {
-                            font-size: 1rem;
+                            padding: 0.6rem 1.2rem;
+                            font-size: 1.4rem;
                         }
                     }
                 }
@@ -1553,19 +1695,31 @@ a {
             padding-left: 3.6rem;
         }
 
+        /* the line and every diamond are centred on the same point: 1.25rem from the left.
+           The line starts at the centre of the first diamond (diamond top + 0.8rem). */
         &::before {
             content: "";
             position: absolute;
-            top: 0.8rem;
+            top: 1.2rem;
             bottom: 0;
-            left: 1.2rem;
+            left: 1.25rem;
             width: 0.1rem;
+            transform: translateX(-50%);
             background: linear-gradient(
                 180deg,
                 var(--gold),
                 var(--gold-faint) 80%,
                 transparent
             );
+        }
+
+        /* when the first entry is a highlighted card, its diamond sits lower */
+        &:has(> .timeline-item.is-highlight:first-child)::before {
+            top: 4.4rem;
+
+            @media screen and (max-width: 767px) {
+                top: 3.6rem;
+            }
         }
 
         .timeline-item {
@@ -1584,7 +1738,8 @@ a {
                 content: "";
                 position: absolute;
                 top: 0.4rem;
-                left: -6.55rem;
+                /* 1.25rem minus the timeline's left padding (7rem, SP 3.6rem) */
+                left: -5.75rem;
                 width: 1.6rem;
                 height: 1.6rem;
                 border: 0.1rem solid var(--gold);
@@ -1592,22 +1747,23 @@ a {
                 box-shadow:
                     inset 0 0 0 0.4rem var(--navy-950),
                     0 0 2rem rgba(212, 175, 55, 0.4);
-                transform: rotate(45deg);
+                transform: translateX(-50%) rotate(45deg);
 
                 @media screen and (max-width: 767px) {
-                    left: -3.15rem;
+                    left: -2.35rem;
                 }
             }
 
             .timeline-period {
                 font-family: var(--font-mono);
                 font-size: 1.3rem;
-                letter-spacing: 0.2em;
+                letter-spacing: 0.12em;
                 text-transform: uppercase;
                 color: var(--gold-dim);
 
                 @media screen and (max-width: 767px) {
-                    font-size: 1.1rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.08em;
                 }
             }
 
@@ -1615,7 +1771,8 @@ a {
                 margin-top: 1rem;
                 font-family: var(--font-display);
                 font-size: 4rem;
-                font-weight: 600;
+                font-weight: 500;
+                letter-spacing: -0.015em;
                 line-height: 1.15;
                 color: var(--gold-light);
 
@@ -1663,23 +1820,21 @@ a {
     .contact-body {
         .contact-lead {
             font-family: var(--font-display);
-            font-size: 9.6rem;
-            font-weight: 500;
-            line-height: 1.02;
+            font-size: 8rem;
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -0.02em;
             color: var(--gold);
 
             @media screen and (max-width: 767px) {
-                font-size: 4.4rem;
+                font-size: 3.6rem;
             }
 
             & em {
+                font-family: var(--font-display);
                 font-style: italic;
-                background: var(--gold-gradient);
-                background-size: 200% auto;
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                animation: shimmer 8s linear infinite;
+                letter-spacing: 0;
+                color: var(--gold-light);
             }
         }
 
@@ -1734,19 +1889,45 @@ a {
 
             .contact-item {
                 & a {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 1.2rem;
+                    padding: 1.2rem 2.4rem 1.2rem 1.4rem;
+                    border: 0.1rem solid var(--gold-faint);
+                    border-radius: 0.8rem;
                     font-family: var(--font-mono);
                     font-size: 1.4rem;
-                    letter-spacing: 0.2em;
+                    line-height: 1;
+                    letter-spacing: 0.14em;
                     text-transform: uppercase;
                     color: var(--gold-light);
-                    transition: color 0.3s;
+                    transition:
+                        color 0.3s,
+                        border-color 0.3s,
+                        background 0.3s;
 
                     @media screen and (max-width: 767px) {
-                        font-size: 1.2rem;
+                        gap: 1rem;
+                        padding: 1.1rem 2rem 1.1rem 1.2rem;
+                        letter-spacing: 0.1em;
+                    }
+
+                    .contact-icon {
+                        flex-shrink: 0;
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        fill: currentColor;
+
+                        @media screen and (max-width: 767px) {
+                            width: 2rem;
+                            height: 2rem;
+                        }
                     }
 
                     &:hover {
-                        color: var(--gold);
+                        border-color: var(--gold);
+                        background: var(--gold);
+                        color: var(--navy-950);
                     }
                 }
             }
@@ -1764,7 +1945,7 @@ a {
     border-top: 0.1rem solid var(--gold-faint);
 
     @media screen and (max-width: 767px) {
-        padding: 3.2rem 0 11rem;
+        padding: 3.2rem 0 10rem;
     }
 
     .footer-inner {
@@ -1779,7 +1960,16 @@ a {
         @media screen and (max-width: 767px) {
             flex-direction: column;
             gap: 0.8rem;
-            font-size: 1rem;
+            padding-right: 12rem;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    .footer-break {
+        @media screen and (max-width: 767px) {
+            display: block;
         }
     }
 }
@@ -1795,7 +1985,8 @@ a {
     border-top: 0.1rem solid var(--gold-faint);
 
     @media screen and (max-width: 767px) {
-        gap: 1.2rem;
+        flex-direction: column;
+        gap: 1.6rem;
         margin-top: 1.2rem;
         padding-top: 2.4rem;
     }
@@ -1806,18 +1997,22 @@ a {
         flex-direction: column;
         gap: 0.8rem;
 
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
         .about-stat-value {
             font-family: var(--font-display);
             font-size: 5.6rem;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 1;
-            background: var(--gold-gradient);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--gold-light);
 
             @media screen and (max-width: 767px) {
+                flex-shrink: 0;
+                width: 10rem;
                 font-size: 3.2rem;
             }
         }
@@ -1826,12 +2021,12 @@ a {
             font-family: var(--font-mono);
             font-size: 1.3rem;
             line-height: 1.5;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--gold-dim);
 
             @media screen and (max-width: 767px) {
-                font-size: 0.9rem;
+                font-size: 1.4rem;
                 letter-spacing: 0.04em;
             }
         }
@@ -1925,9 +2120,10 @@ a {
                 position: relative;
                 margin: 2.4rem 0 1.4rem;
                 font-family: var(--font-display);
-                font-size: 3.4rem;
-                font-weight: 600;
+                font-size: 3.2rem;
+                font-weight: 500;
                 line-height: 1.15;
+                letter-spacing: -0.015em;
                 color: var(--gold-light);
 
                 @media screen and (max-width: 767px) {
@@ -2038,27 +2234,24 @@ a {
             .cert-level {
                 font-family: var(--font-mono);
                 font-size: 1.2rem;
-                letter-spacing: 0.25em;
+                letter-spacing: 0.16em;
                 text-transform: uppercase;
                 color: var(--gold-dim);
 
                 @media screen and (max-width: 767px) {
-                    font-size: 1rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.1em;
                 }
             }
 
             .cert-name {
                 margin: 1.2rem 0 2.4rem;
                 font-family: var(--font-display);
-                font-size: 5.6rem;
-                font-weight: 600;
-                line-height: 1.05;
-                background: var(--gold-gradient);
-                background-size: 200% auto;
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                animation: shimmer 10s linear infinite;
+                font-size: 5.2rem;
+                font-weight: 500;
+                line-height: 1.08;
+                letter-spacing: -0.02em;
+                color: var(--gold-light);
 
                 @media screen and (max-width: 767px) {
                     margin: 1rem 0 1.6rem;
@@ -2119,9 +2312,14 @@ a {
                     & dt {
                         font-family: var(--font-mono);
                         font-size: 1.1rem;
-                        letter-spacing: 0.2em;
+                        letter-spacing: 0.12em;
                         text-transform: uppercase;
                         color: var(--gold-dim);
+
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                            letter-spacing: 0.06em;
+                        }
                     }
 
                     & dd {
@@ -2143,7 +2341,8 @@ a {
                         overflow-wrap: anywhere;
 
                         @media screen and (max-width: 767px) {
-                            font-size: 1.2rem;
+                            font-size: 1.4rem;
+                            letter-spacing: 0;
                         }
                     }
                 }
@@ -2170,8 +2369,9 @@ a {
 #journey .timeline .timeline-item.is-highlight {
     margin-bottom: 7rem;
     padding: 3.2rem 4rem 3.6rem;
-    border: 0.1rem solid var(--gold-dim);
     border-radius: 2rem;
+    /* an inset shadow instead of a border, so the diamond isn't offset by the border width */
+    box-shadow: inset 0 0 0 0.1rem var(--gold-dim);
     background: linear-gradient(
         120deg,
         rgba(212, 175, 55, 0.16),
@@ -2185,13 +2385,11 @@ a {
 
     &::before {
         top: 3.6rem;
-        left: -6.55rem;
         background: var(--gold-light);
         box-shadow: 0 0 3rem var(--gold);
 
         @media screen and (max-width: 767px) {
             top: 2.8rem;
-            left: -3.15rem;
         }
     }
 
@@ -2253,23 +2451,24 @@ a {
     .visual-browser {
         position: absolute;
         top: 3.2rem;
-        left: 50%;
+        right: 8%;
         bottom: 0;
+        left: 8%;
         display: flex;
         flex-direction: column;
-        width: 84%;
         overflow: hidden;
         border: 0.1rem solid var(--gold-faint);
         border-bottom: 0;
         border-radius: 1rem 1rem 0 0;
         background: var(--navy-950);
         box-shadow: 0 -1rem 5rem rgba(0, 0, 0, 0.5);
-        transform: translateX(-50%) translateY(1.2rem);
+        transform: translateY(1.2rem);
         transition: transform 0.6s var(--ease-out);
 
         @media screen and (max-width: 767px) {
             top: 2rem;
-            width: 88%;
+            right: 6%;
+            left: 6%;
         }
 
         .visual-browser-bar {
@@ -2301,17 +2500,30 @@ a {
         .visual-browser-img {
             flex: 1;
             width: 100%;
+            height: auto;
             min-height: 0;
             object-fit: cover;
             object-position: center top;
+        }
+    }
+
+    /* full-page screenshots scroll through the page on hover */
+    .visual-browser.is-scrolling {
+        .visual-browser-img {
             transition: object-position 7s ease-in-out;
         }
     }
 }
 
 #work .work-list .project-card .project-link:hover .visual-browser {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
+}
 
+#work
+    .work-list
+    .project-card
+    .project-link:hover
+    .visual-browser.is-scrolling {
     .visual-browser-img {
         object-position: center bottom;
     }
@@ -2353,7 +2565,7 @@ a {
 
     @media screen and (max-width: 767px) {
         right: 1.6rem;
-        bottom: 1.6rem;
+        bottom: 7rem;
         width: 8rem;
         height: 8rem;
         aspect-ratio: auto;
@@ -2471,11 +2683,11 @@ a {
 
         @media screen and (max-width: 767px) {
             top: auto;
-            right: 11rem;
-            bottom: 1rem;
-            width: 20rem;
+            right: 0;
+            bottom: 14rem;
+            width: 16rem;
             padding: 1.2rem 1.6rem;
-            border-radius: 1.4rem 1.4rem 0.4rem 1.4rem;
+            border-radius: 1.4rem 1.4rem 1.4rem 0.4rem;
             opacity: 0;
             transform: translateX(1rem);
             transition:
@@ -2491,7 +2703,7 @@ a {
             color: var(--gold-pale);
 
             @media screen and (max-width: 767px) {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
         }
     }
@@ -2660,6 +2872,29 @@ a {
     50% {
         transform: translate(-50%, -50%) scale(1.1);
         opacity: 1;
+    }
+}
+
+/* blood moon: mostly steady, with an uneasy flicker now and then
+   (animates filter, not transform, so the centring and hover scale still work) */
+@keyframes blood-flicker {
+    0%,
+    100%,
+    42%,
+    50% {
+        filter: brightness(1);
+    }
+    44% {
+        filter: brightness(0.55);
+    }
+    46% {
+        filter: brightness(1.15);
+    }
+    48% {
+        filter: brightness(0.7);
+    }
+    75% {
+        filter: brightness(1.08);
     }
 }
 

@@ -7,6 +7,8 @@
     var root = document.documentElement;
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var mobileQuery = window.matchMedia("(max-width: 767px)");
+    // The burger menu is used up to tablet width (matches the CSS breakpoint)
+    var menuQuery = window.matchMedia("(max-width: 1023px)");
 
     function clamp(v, min, max) {
         return Math.min(max, Math.max(min, v));
@@ -95,7 +97,7 @@
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && root.classList.contains("menu-open")) setMenu(false);
     });
-    mobileQuery.addEventListener("change", function (e) {
+    menuQuery.addEventListener("change", function (e) {
         if (!e.matches) setMenu(false);
     });
 

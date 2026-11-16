@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b0a1a'/%3E%3Cpath d='M11 33a13 13 0 0 1 26 0' fill='none' stroke='%23ffffff' stroke-width='4.5' stroke-linecap='round'/%3E%3Cpath d='M8 38h22' stroke='%23d4ff3a' stroke-width='4.5' stroke-linecap='round'/%3E%3Ccircle cx='38' cy='38' r='3' fill='%23d4ff3a'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -73,12 +73,12 @@
             </svg>
             <div class="hero-inner">
                 <div class="hero-copy">
-                    <p class="hero-kicker"><span class="kicker-jp">採用情報</span><span class="kicker-en">Careers 2026 — 18 open roles</span></p>
+                    <p class="hero-kicker"><span class="kicker-live" aria-hidden="true"></span><span class="kicker-en">Careers 2026 · 8 open roles</span><span class="kicker-jp">採用情報</span></p>
                     <h1 class="hero-title">
                         <span class="hero-line"><span class="hero-line-inner" data-split>Build what</span></span>
                         <span class="hero-line"><span class="hero-line-inner" data-split>moves</span></span>
                         <span class="hero-line hero-line-rotator">
-                            <span class="hero-rotator" aria-live="polite">
+                            <span class="hero-rotator">
                                 <span class="rotator-word is-active">Tokyo.</span>
                                 <span class="rotator-word">freight.</span>
                                 <span class="rotator-word">cities.</span>
@@ -93,6 +93,11 @@
                         </a>
                         <a href="#voices" class="btn btn-ghost">Meet the team</a>
                     </div>
+                    <ul class="hero-facts">
+                        <li class="hero-fact"><span class="hero-fact-value">Shibuya</span><span class="hero-fact-label">Tokyo HQ &amp; Osaka</span></li>
+                        <li class="hero-fact"><span class="hero-fact-value">Hybrid</span><span class="hero-fact-label">Remote across Japan</span></li>
+                        <li class="hero-fact"><span class="hero-fact-value">EN / JP</span><span class="hero-fact-label">English-first teams</span></li>
+                    </ul>
                 </div>
                 <div class="hero-collage" aria-hidden="true">
                     <figure class="collage-item collage-item-1" data-speed="0.12">
@@ -104,29 +109,27 @@
                     <figure class="collage-item collage-item-3" data-speed="0.2">
                         <img src="https://picsum.photos/id/1078/600/760" width="600" height="760" alt="">
                     </figure>
-                    <div class="collage-badge">
-                        <svg class="badge-ring" viewBox="0 0 120 120">
-                            <defs><path id="badge-circle" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0" /></defs>
-                            <text><textPath href="#badge-circle" textLength="282" lengthAdjust="spacing">WE'RE HIRING • 一緒に働こう • JOIN US • </textPath></text>
-                        </svg>
-                        <svg class="badge-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg>
+                    <div class="collage-stat">
+                        <p class="collage-stat-label"><span class="collage-stat-dot"></span>Routed today</p>
+                        <p class="collage-stat-value" data-live-count="1204388">1,204,388</p>
+                        <p class="collage-stat-note">deliveries across 340 operators</p>
                     </div>
                 </div>
             </div>
             <div class="hero-marquee" aria-hidden="true">
                 <div class="marquee-track">
-                    <span class="marquee-item">Backend Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Product Designer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Mobile Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Data Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">UX Researcher</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Product Manager</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Backend Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Product Designer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Mobile Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Data Engineer</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">UX Researcher</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Product Manager</span><span class="marquee-sep">✦</span>
+                    <span class="marquee-item">Backend Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Product Designer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Mobile Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Data Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">UX Researcher</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Product Manager</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Backend Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Product Designer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Mobile Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Data Engineer</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">UX Researcher</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Product Manager</span><span class="marquee-sep"></span>
                 </div>
             </div>
         </section>
@@ -199,14 +202,14 @@
         <section id="culture">
             <div class="values-marquee" aria-hidden="true">
                 <div class="marquee-track marquee-track-reverse">
-                    <span class="marquee-item">Own the route</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Ship small, ship often</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Curious by default</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">One crew</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Own the route</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Ship small, ship often</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Curious by default</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">One crew</span><span class="marquee-sep">✦</span>
+                    <span class="marquee-item">Own the route</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Ship small, ship often</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Curious by default</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">One crew</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Own the route</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Ship small, ship often</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Curious by default</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">One crew</span><span class="marquee-sep"></span>
                 </div>
             </div>
             <div class="section-inner">
@@ -332,43 +335,59 @@
                 <ul class="benefits-list" data-stagger>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 22L24 8l18 14" /><path d="M10 20v20h28V20" /><rect x="19" y="28" width="10" height="12" /></svg>
-                        <h3 class="benefit-title">Hybrid &amp; remote</h3>
-                        <p class="benefit-text">Work from anywhere in Japan. Come to the Shibuya office when it helps.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">Hybrid &amp; remote</h3>
+                            <p class="benefit-text">Work from anywhere in Japan. Come to the Shibuya office when it helps.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="22" rx="2" /><path d="M18 40h12M24 32v8" /></svg>
-                        <h3 class="benefit-title">¥150k setup budget</h3>
-                        <p class="benefit-text">Chair, monitor, keyboard — build the desk you actually want.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">¥150k setup budget</h3>
+                            <p class="benefit-text">Chair, monitor, keyboard — build the desk you actually want.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 12h14a4 4 0 0 1 4 4v24a4 4 0 0 0-4-4H6z" /><path d="M42 12H28a4 4 0 0 0-4 4v24a4 4 0 0 1 4-4h14z" /></svg>
-                        <h3 class="benefit-title">¥200k learning / year</h3>
-                        <p class="benefit-text">Books, courses, conferences. Speak at one and we cover the trip.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">¥200k learning / year</h3>
+                            <p class="benefit-text">Books, courses, conferences. Speak at one and we cover the trip.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 10h22v16H16l-6 5v-5H6z" /><path d="M32 18h10v16h-4v5l-6-5h-8v-4" /></svg>
-                        <h3 class="benefit-title">JP / EN lessons</h3>
-                        <p class="benefit-text">Weekly language classes in both directions, on company time.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">JP / EN lessons</h3>
+                            <p class="benefit-text">Weekly language classes in both directions, on company time.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40l12-14 8 6 16-20" /><path d="M32 12h10v10" /></svg>
-                        <h3 class="benefit-title">Stock options</h3>
-                        <p class="benefit-text">Everyone owns a piece of what we're building, from day one.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">Stock options</h3>
+                            <p class="benefit-text">Everyone owns a piece of what we're building, from day one.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30l40-14-4-4-14 4-10-8-4 2 6 9-8 3-4-3-3 1 4 7z" /><path d="M8 40h32" /></svg>
-                        <h3 class="benefit-title">Visa &amp; relocation</h3>
-                        <p class="benefit-text">Full visa sponsorship, flights and two weeks of housing to land softly.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">Visa &amp; relocation</h3>
+                            <p class="benefit-text">Full visa sponsorship, flights and two weeks of housing to land softly.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40S6 30 6 18a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 12-18 22-18 22z" /></svg>
-                        <h3 class="benefit-title">Family &amp; health</h3>
-                        <p class="benefit-text">Topped-up parental leave, annual health checks and mental-health support.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">Family &amp; health</h3>
+                            <p class="benefit-text">Topped-up parental leave, annual health checks and mental-health support.</p>
+                        </div>
                     </li>
                     <li class="benefit-card reveal">
                         <svg class="benefit-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="30" rx="6" /><path d="M10 24h28" /><circle cx="17" cy="30" r="1.5" /><circle cx="31" cy="30" r="1.5" /><path d="M14 42l4-6M34 42l-4-6" /></svg>
-                        <h3 class="benefit-title">Mobility pass</h3>
-                        <p class="benefit-text">Commuting, bike share and the occasional shinkansen to see customers.</p>
+                        <div class="benefit-body">
+                            <h3 class="benefit-title">Mobility pass</h3>
+                            <p class="benefit-text">Commuting, bike share and the occasional shinkansen to see customers.</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -447,7 +466,7 @@
                         <p class="section-kicker"><span class="kicker-jp">募集職種</span><span class="kicker-en">Open positions</span></p>
                         <h2 class="section-title">Find your<br>next route.</h2>
                     </div>
-                    <p class="jobs-count"><span class="jobs-count-num">8</span> roles open now</p>
+                    <p class="jobs-count" aria-live="polite"><span class="jobs-count-num">8</span> roles open now</p>
                 </div>
                 <div class="job-filters reveal" role="group" aria-label="Filter roles by team">
                     <button class="filter-tab is-active" type="button" data-filter="all" aria-pressed="true">All <span class="filter-count">8</span></button>
@@ -546,24 +565,28 @@
                         <h3 class="process-title">Casual chat</h3>
                         <p class="process-jp">カジュアル面談</p>
                         <p class="process-text">30 minutes with a future teammate. No CV grilling — just questions both ways.</p>
+                        <p class="process-meta"><span>30 min</span><span>Online</span></p>
                     </li>
                     <li class="process-step reveal">
                         <span class="process-num">02</span>
                         <h3 class="process-title">Skills interview</h3>
                         <p class="process-jp">スキル面接</p>
                         <p class="process-text">A practical conversation about something you've built and how you'd approach ours.</p>
+                        <p class="process-meta"><span>60 min</span><span>Online</span></p>
                     </li>
                     <li class="process-step reveal">
                         <span class="process-num">03</span>
                         <h3 class="process-title">Work session</h3>
                         <p class="process-jp">ワークセッション</p>
                         <p class="process-text">Pair with us for 90 minutes on a real-ish problem. Paid, if you choose a take-home.</p>
+                        <p class="process-meta"><span>90 min</span><span>Shibuya or online</span></p>
                     </li>
                     <li class="process-step reveal">
                         <span class="process-num">04</span>
                         <h3 class="process-title">Final &amp; offer</h3>
                         <p class="process-jp">最終面接・内定</p>
                         <p class="process-text">Meet the founders, ask anything, and get a clear offer within five working days.</p>
+                        <p class="process-meta"><span>45 min</span><span>Offer in 5 days</span></p>
                     </li>
                 </ol>
             </div>
@@ -576,10 +599,10 @@
             </div>
             <div class="apply-marquee" aria-hidden="true">
                 <div class="marquee-track">
-                    <span class="marquee-item">Join Arcline</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">一緒に働こう</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">Join Arcline</span><span class="marquee-sep">✦</span>
-                    <span class="marquee-item">一緒に働こう</span><span class="marquee-sep">✦</span>
+                    <span class="marquee-item">Join Arcline</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">一緒に働こう</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">Join Arcline</span><span class="marquee-sep"></span>
+                    <span class="marquee-item">一緒に働こう</span><span class="marquee-sep"></span>
                 </div>
             </div>
             <div class="section-inner apply-inner reveal">

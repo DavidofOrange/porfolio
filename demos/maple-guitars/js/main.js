@@ -6,7 +6,7 @@
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     var isMobile = function () {
-        return window.innerWidth <= 767;
+        return window.innerWidth <= 1023;
     };
     var lerp = function (a, b, t) {
         return a + (b - a) * t;
@@ -268,7 +268,7 @@
        --------------------------------------------------------- */
     var config = document.querySelector("[data-config]");
     var totalEl = document.querySelector("[data-total]");
-    var BASE = 1280000;
+    var BASE = 460000; // Aurora, AAAA flame, standard spec (tax excluded)
     var shownTotal = BASE;
     var totalRaf = null;
 
@@ -506,7 +506,7 @@
         var y = window.scrollY;
 
         // Hero guitar: rotate / scale / drift as the hero leaves
-        if (heroScroll && heroSection) {
+        if (heroScroll && heroSection && !reduceMotion) {
             var hp = clamp(y / heroSection.offsetHeight, 0, 1);
             heroScroll.style.setProperty("--sr", (hp * 14).toFixed(2) + "deg");
             heroScroll.style.setProperty("--ss", (1 - hp * 0.12).toFixed(3));
@@ -534,12 +534,14 @@
             });
         }
 
-        // Image parallax
+        // Image parallax (clamped so the 1.14x-scaled image never shows its edge)
+        if (reduceMotion) return;
         parallaxEls.forEach(function (el) {
             var r = el.getBoundingClientRect();
             if (r.bottom < 0 || r.top > vh) return;
             var speed = parseFloat(el.getAttribute("data-parallax")) || 0.06;
-            var offset = (r.top + r.height / 2 - vh / 2) * -speed;
+            var limit = r.height * 0.065;
+            var offset = clamp((r.top + r.height / 2 - vh / 2) * -speed, -limit, limit);
             el.style.setProperty("--py", offset.toFixed(1) + "px");
         });
     }
